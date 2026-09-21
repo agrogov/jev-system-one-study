@@ -1,0 +1,43 @@
+api:
+  base_url: "https://api.typesafe.ai"
+  endpoint: "/v1/systemone"
+  model: "jev-latest"
+  timeout_seconds: 60
+  concurrency: 4
+  max_retries: 5
+  min_retry_seconds: 1.0
+  max_retry_seconds: 30.0
+
+run:
+  seed: 260919
+  output_dir: "results"
+  profile: "core"       # smoke | core | full
+  repetitions: 8
+  save_request_bodies: true
+  save_response_bodies: true
+
+profiles:
+  smoke:
+    calibration_cases_per_family: 8
+    permutation_trials: 4
+    paraphrase_trials: 3
+    repeatability_repetitions: 4
+    parallel_question_counts: [1, 4, 16]
+    cardinalities: [2, 8, 32]
+    context_chars: [500, 4000]
+  core:
+    calibration_cases_per_family: 50
+    permutation_trials: 16
+    paraphrase_trials: 8
+    repeatability_repetitions: 12
+    parallel_question_counts: [1, 2, 4, 8, 16, 32, 64]
+    cardinalities: [2, 4, 8, 16, 32, 64, 128]
+    context_chars: [500, 2000, 8000, 32000]
+  full:
+    calibration_cases_per_family: 200
+    permutation_trials: 64
+    paraphrase_trials: 24
+    repeatability_repetitions: 40
+    parallel_question_counts: [1, 2, 4, 8, 16, 32, 64, 128]
+    cardinalities: [2, 4, 8, 16, 32, 64, 128, 255]
+    context_chars: [500, 2000, 8000, 32000, 100000]

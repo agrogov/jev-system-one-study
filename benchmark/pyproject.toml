@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-blackbox-benchmark"
+version = "1.0.0"
+description = "Private black-box benchmark for TypeSafe Jev/System One"
+requires-python = ">=3.10"
+dependencies = [
+  "httpx[http2]>=0.27,<1",
+  "PyYAML>=6,<7",
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "matplotlib>=3.8,<4",
+]
+
+[project.scripts]
+jevbench = "jevbench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+dev = ["build>=1.2,<2"]

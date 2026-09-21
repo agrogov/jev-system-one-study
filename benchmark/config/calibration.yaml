@@ -1,0 +1,45 @@
+api:
+  base_url: "https://api.typesafe.ai"
+  endpoint: "/v1/systemone"
+  model: "jev-latest"
+  timeout_seconds: 60
+  concurrency: 4
+  max_retries: 5
+  min_retry_seconds: 1.0
+  max_retry_seconds: 30.0
+
+run:
+  suite: "probabilistic"
+  seed: 260919
+  output_dir: "results"
+  profile: "calibration_core"   # calibration_smoke | calibration_core | calibration_full
+  save_request_bodies: true
+  save_response_bodies: true
+
+profiles:
+  calibration_smoke:
+    explicit_randomness_cases: 38
+    bayes_single_signal_cases: 80
+    bayes_two_signal_cases: 80
+    base_rate_stress_cases: 24
+    representation_groups: 10
+    multiclass_bayes_cases: 60
+    repeatability_repetitions: 5
+
+  calibration_core:
+    explicit_randomness_cases: 190
+    bayes_single_signal_cases: 400
+    bayes_two_signal_cases: 400
+    base_rate_stress_cases: 120
+    representation_groups: 30
+    multiclass_bayes_cases: 300
+    repeatability_repetitions: 20
+
+  calibration_full:
+    explicit_randomness_cases: 760
+    bayes_single_signal_cases: 1500
+    bayes_two_signal_cases: 1500
+    base_rate_stress_cases: 600
+    representation_groups: 100
+    multiclass_bayes_cases: 1000
+    repeatability_repetitions: 50
