@@ -50,11 +50,11 @@ These are product/company claims; no public reproducible RLCD paper or full arch
 
 Five recorded result directories were used:
 
-- `results/run_20260919T201050Z_core` — 303-request concurrent architecture/robustness benchmark.
-- `results/run_20260919T201739Z_core` — 26-request isolated `concurrency=1` architecture probe.
-- `results/run_20260919T202139Z_full` — 31-request isolated full scaling probe reaching 128 questions, 255 choices, and approximately 21K input tokens.
-- `results/run_20260919T203758Z_calibration_full` — 5,810-request synthetic exact-probability study.
-- `results/run_20260919T211437Z_semantic_full` — 1,110-request six-domain semantic study.
+- `../jev-results` — 303-request concurrent architecture/robustness benchmark.
+- `../jev-results` — 26-request isolated `concurrency=1` architecture probe.
+- `../jev-results` — 31-request isolated full scaling probe reaching 128 questions, 255 choices, and approximately 21K input tokens.
+- `../jev-results` — 5,810-request synthetic exact-probability study.
+- `../jev-results` — 1,110-request six-domain semantic study.
 
 Each directory is self-contained and preserves its own `manifest.json`, generated `cases.jsonl`, raw API `raw.jsonl`, normalized data, summary, report, and figures. No legacy source-result ZIP archives are required by the analysis.
 
@@ -318,17 +318,17 @@ runtime question representations      runtime candidate/level representations
 
 A mathematical abstraction is:
 
-\[
-H_x = E_	heta(x)
-\]
+$$
+H_x = E_\theta(x)
+$$
 
-\[
-z_{ij}=g_	heta(H_x, q_i, c_{ij})
-\]
+$$
+z_{ij}=g_\theta(H_x, q_i, c_{ij})
+$$
 
-\[
+$$
 P(c_{ij}\mid x,q_i)=\operatorname{softmax}_j(z_{ij})
-\]
+$$
 
 where the state representation is shared and many question/candidate interactions are executed as batched tensor operations. For Noul, the candidate space is effectively binary; Score likely maps ordered levels to a distribution and computes a scalar position from that distribution.
 
@@ -386,19 +386,19 @@ The fundamental distinction demonstrated here is not simply “small model versu
 
 A conventional causal LLM models a token sequence:
 
-\[
+$$
 P(t_1,\ldots,t_T\mid x)=\prod_{k=1}^T P(t_k\mid x,t_{<k})
-\]
+$$
 
 Even when grammar-constrained, structured output is ordinarily serialized through sequential token decoding.
 
 The Jev observations are instead consistent with direct evaluation of bounded semantic answer spaces:
 
-\[
-(state, question, candidates) ightarrow \Delta^K
-\]
+$$
+(\text{state}, \text{question}, \text{candidates}) \rightarrow \Delta^K
+$$
 
-where \(\Delta^K\) is a probability simplex over developer-provided candidates. Giving up unrestricted string generation permits much greater batching and removes the inherently serial output loop. This readily explains why thousands of nominal output-accounting tokens need not correspond to thousands of decoder steps.
+where $\Delta^K$ is a probability simplex over developer-provided candidates. Giving up unrestricted string generation permits much greater batching and removes the inherently serial output loop. This readily explains why thousands of nominal output-accounting tokens need not correspond to thousands of decoder steps.
 
 The trade-off is equally important: Jev cannot replace a generative model for code generation, explanation, arbitrary synthesis, or long deliberative reasoning. Its most natural role is inside software as a fast semantic judgment layer, optionally escalating uncertain cases to a larger reasoning model or human.
 
@@ -410,15 +410,15 @@ The earlier SalesRLAgent work shares the broad philosophy of mapping semantic st
 
 However, Jev's observed capability is materially more general: runtime questions and candidate sets define new decision functions without retraining a task-specific output head. Functionally, the distinction is approximately:
 
-\[
-f_{sales}(x)ightarrow P(	ext{conversion})
-\]
+$$
+f_{sales}(x)\rightarrow P(\text{conversion})
+$$
 
 versus
 
-\[
-f(x,q,C)ightarrow P(C\mid x,q).
-\]
+$$
+f(x,q,C)\rightarrow P(C\mid x,q).
+$$
 
 Thus “built a domain-specific predecessor embodying similar principles” is supported; “implemented the same general Jev architecture” is not established by the 2025 paper alone.
 
@@ -540,13 +540,21 @@ jevbench --config config/architecture.yaml run --profile core --concurrency 4
 Architecture core, isolated scaling (26 requests):
 
 ```bash
-jevbench --config config/architecture.yaml run   --profile core --concurrency 1   --only parallel_question_scaling   --only choice_cardinality_scaling   --only context_length_position
+jevbench --config config/architecture.yaml run \
+  --profile core --concurrency 1 \
+  --only parallel_question_scaling \
+  --only choice_cardinality_scaling \
+  --only context_length_position
 ```
 
 Architecture full, isolated boundary scaling (31 requests):
 
 ```bash
-jevbench --config config/architecture.yaml run   --profile full --concurrency 1   --only parallel_question_scaling   --only choice_cardinality_scaling   --only context_length_position
+jevbench --config config/architecture.yaml run \
+  --profile full --concurrency 1 \
+  --only parallel_question_scaling \
+  --only choice_cardinality_scaling \
+  --only context_length_position
 ```
 
 Exact probabilistic calibration, full (5,810 requests):
@@ -565,7 +573,7 @@ For architecture latency inference, use `x-envoy-upstream-service-time` from `ra
 
 ## Appendix B. Interpretation guide
 
-- **Probability calibration** asks whether predictions assigned probability \(p\) occur at frequency \(p\) on a defined population.
+- **Probability calibration** asks whether predictions assigned probability $p$ occur at frequency $p$ on a defined population.
 - **Sharpness** measures concentration of the predictive distribution; sharpness without calibration can be dangerous.
 - **Selective risk** asks how error changes as low-confidence cases are rejected/escalated.
 - **TV/JSD/KL** measure distance between full distributions, not merely agreement on the top class.
@@ -573,4 +581,4 @@ For architecture latency inference, use `x-envoy-upstream-service-time` from `ra
 
 ## Appendix C. Accompanying artifact bundle
 
-The complete bundle contains the unified `benchmark/` codebase, this `report/`, and all five self-contained raw `results/` directories. Older development benchmark packages and duplicate source-result archives are intentionally excluded because `benchmark/` v1.0.0 and the extracted result directories supersede them.
+The complete bundle contains the unified `benchmark/` codebase, this `report/`, and all five self-contained raw `../jev-results` directories. Older development benchmark packages and duplicate source-result archives are intentionally excluded because `benchmark/` v1.0.0 and the extracted result directories supersede them.

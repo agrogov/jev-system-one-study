@@ -1,0 +1,28 @@
+{
+  "cases": 26,
+  "by_experiment": {
+    "choice_cardinality_scaling": 7,
+    "context_length_position": 12,
+    "parallel_question_scaling": 7
+  },
+  "questions_per_request": {
+    "count": 26,
+    "min": 1,
+    "max": 64
+  },
+  "choice_cardinality": {
+    "count": 19,
+    "min": 2,
+    "max": 128
+  },
+  "score_levels": {
+    "count": 0,
+    "min": null,
+    "max": null
+  },
+  "state_characters": {
+    "count": 26,
+    "min": 154,
+    "max": 32120
+  }
+}

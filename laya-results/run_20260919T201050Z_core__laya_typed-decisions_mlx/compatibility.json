@@ -1,0 +1,183 @@
+{
+  "requests_total": 303,
+  "requests_ok": 303,
+  "requests_failed": 0,
+  "requests_comparable": 297,
+  "compatibility_status": {
+    "full_input": 297,
+    "truncated_input": 6
+  },
+  "by_experiment": {
+    "calibration_choice": {
+      "total": 50,
+      "ok": 50,
+      "failed": 0,
+      "full_input": 50,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 50
+    },
+    "calibration_noul_factual": {
+      "total": 50,
+      "ok": 50,
+      "failed": 0,
+      "full_input": 50,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 50
+    },
+    "calibration_noul_negation": {
+      "total": 50,
+      "ok": 50,
+      "failed": 0,
+      "full_input": 50,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 50
+    },
+    "calibration_score": {
+      "total": 50,
+      "ok": 50,
+      "failed": 0,
+      "full_input": 50,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 50
+    },
+    "candidate_order_invariance": {
+      "total": 16,
+      "ok": 16,
+      "failed": 0,
+      "full_input": 16,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 16
+    },
+    "choice_cardinality_scaling": {
+      "total": 7,
+      "ok": 7,
+      "failed": 0,
+      "full_input": 7,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 7
+    },
+    "context_length_position": {
+      "total": 12,
+      "ok": 12,
+      "failed": 0,
+      "full_input": 6,
+      "truncated_input": 6,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 6
+    },
+    "contradiction_sensitivity": {
+      "total": 2,
+      "ok": 2,
+      "failed": 0,
+      "full_input": 2,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 2
+    },
+    "domain_generalization": {
+      "total": 6,
+      "ok": 6,
+      "failed": 0,
+      "full_input": 6,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 6
+    },
+    "evidence_removal": {
+      "total": 4,
+      "ok": 4,
+      "failed": 0,
+      "full_input": 4,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 4
+    },
+    "irrelevant_context_robustness": {
+      "total": 6,
+      "ok": 6,
+      "failed": 0,
+      "full_input": 6,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 6
+    },
+    "label_key_invariance": {
+      "total": 16,
+      "ok": 16,
+      "failed": 0,
+      "full_input": 16,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 16
+    },
+    "parallel_question_scaling": {
+      "total": 7,
+      "ok": 7,
+      "failed": 0,
+      "full_input": 7,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 7
+    },
+    "question_independence": {
+      "total": 6,
+      "ok": 6,
+      "failed": 0,
+      "full_input": 6,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 6
+    },
+    "question_paraphrase_invariance": {
+      "total": 8,
+      "ok": 8,
+      "failed": 0,
+      "full_input": 8,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 8
+    },
+    "repeatability": {
+      "total": 12,
+      "ok": 12,
+      "failed": 0,
+      "full_input": 12,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 12
+    },
+    "state_prompt_injection": {
+      "total": 1,
+      "ok": 1,
+      "failed": 0,
+      "full_input": 1,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 1
+    }
+  },
+  "failure_types": {}
+}

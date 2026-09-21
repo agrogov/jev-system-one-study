@@ -1,0 +1,193 @@
+{
+  "created_at_utc": "2026-09-21T15:02:06.334647+00:00",
+  "provider": "laya-local",
+  "backend": "mlx",
+  "checkpoint": "typed-decisions",
+  "model": "aac6fef/laya-typed-decisions-mlx",
+  "package_version": "0.1.0",
+  "device": null,
+  "dtype": "float16",
+  "batch_size": 16,
+  "model_load_seconds": 0.5554640002083033,
+  "warmup_seconds": 0.023777333088219166,
+  "budget_overrides": {},
+  "effective_limits": {
+    "max_len": 1024,
+    "head_max_len": 256
+  },
+  "source_run": "run_20260919T201050Z_core",
+  "source_manifest": {
+    "created_at_utc": "2026-09-19T20:10:50.980452+00:00",
+    "model": "jev-latest",
+    "profile": "core",
+    "seed": 260919,
+    "case_count": 303,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "config": {
+      "api": {
+        "base_url": "https://api.typesafe.ai",
+        "endpoint": "/v1/systemone",
+        "model": "jev-latest",
+        "timeout_seconds": 60,
+        "concurrency": 4,
+        "max_retries": 5,
+        "min_retry_seconds": 1.0,
+        "max_retry_seconds": 30.0
+      },
+      "run": {
+        "seed": 260919,
+        "output_dir": "results",
+        "profile": "core",
+        "repetitions": 8,
+        "save_request_bodies": true,
+        "save_response_bodies": true
+      },
+      "profiles": {
+        "smoke": {
+          "calibration_cases_per_family": 8,
+          "permutation_trials": 4,
+          "paraphrase_trials": 3,
+          "repeatability_repetitions": 4,
+          "parallel_question_counts": [
+            1,
+            4,
+            16
+          ],
+          "cardinalities": [
+            2,
+            8,
+            32
+          ],
+          "context_chars": [
+            500,
+            4000
+          ]
+        },
+        "core": {
+          "calibration_cases_per_family": 50,
+          "permutation_trials": 16,
+          "paraphrase_trials": 8,
+          "repeatability_repetitions": 12,
+          "parallel_question_counts": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "cardinalities": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128
+          ],
+          "context_chars": [
+            500,
+            2000,
+            8000,
+            32000
+          ]
+        },
+        "full": {
+          "calibration_cases_per_family": 200,
+          "permutation_trials": 64,
+          "paraphrase_trials": 24,
+          "repeatability_repetitions": 40,
+          "parallel_question_counts": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128
+          ],
+          "cardinalities": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128,
+            255
+          ],
+          "context_chars": [
+            500,
+            2000,
+            8000,
+            32000,
+            100000
+          ]
+        }
+      }
+    },
+    "finished_at_utc": "2026-09-19T20:11:18.932256+00:00",
+    "elapsed_seconds": 27.929564291844144
+  },
+  "source_cases_sha256": "ad98be1b1589c494467b6c113e4358731842b76d3b890be28c03ef0a7eeebb3b",
+  "selected_cases_sha256": "ad98be1b1589c494467b6c113e4358731842b76d3b890be28c03ef0a7eeebb3b",
+  "preflight": {
+    "cases": 303,
+    "by_experiment": {
+      "calibration_choice": 50,
+      "calibration_noul_factual": 50,
+      "calibration_noul_negation": 50,
+      "calibration_score": 50,
+      "candidate_order_invariance": 16,
+      "choice_cardinality_scaling": 7,
+      "context_length_position": 12,
+      "contradiction_sensitivity": 2,
+      "domain_generalization": 6,
+      "evidence_removal": 4,
+      "irrelevant_context_robustness": 6,
+      "label_key_invariance": 16,
+      "parallel_question_scaling": 7,
+      "question_independence": 6,
+      "question_paraphrase_invariance": 8,
+      "repeatability": 12,
+      "state_prompt_injection": 1
+    },
+    "questions_per_request": {
+      "count": 303,
+      "min": 1,
+      "max": 64
+    },
+    "choice_cardinality": {
+      "count": 145,
+      "min": 2,
+      "max": 128
+    },
+    "score_levels": {
+      "count": 64,
+      "min": 3,
+      "max": 4
+    },
+    "state_characters": {
+      "count": 303,
+      "min": 41,
+      "max": 32120
+    }
+  },
+  "case_count": 303,
+  "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "resume": false,
+  "finished_at_utc": "2026-09-21T15:02:15.552600+00:00",
+  "elapsed_seconds": 9.203876374987885,
+  "requests_total": 303,
+  "requests_ok": 303,
+  "requests_failed": 0,
+  "requests_comparable": 297,
+  "compatibility_status": {
+    "full_input": 297,
+    "truncated_input": 6
+  }
+}

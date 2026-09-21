@@ -1,0 +1,18 @@
+# Documentation-only defaults for scripts/run_laya_benchmark.py.
+# The replay script takes CLI arguments so the original benchmark YAML files and
+# recorded cases remain unchanged.
+laya:
+  preferred_mac_backend: mlx
+  baseline_checkpoint: typed-decisions
+  checkpoints:
+    torch:
+      base: convaiinnovations/laya
+      typed-decisions: convaiinnovations/laya-typed-decisions
+      multilingual: convaiinnovations/laya-multilingual
+    mlx:
+      base: aac6fef/laya-mlx
+      typed-decisions: aac6fef/laya-typed-decisions-mlx
+      multilingual: aac6fef/laya-multilingual-mlx
+  baseline_budget_policy: as-shipped
+  local_concurrency: 1
+  warmup: true

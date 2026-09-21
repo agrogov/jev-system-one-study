@@ -1,0 +1,125 @@
+{
+  "requests_total": 1110,
+  "requests_ok": 1110,
+  "requests_failed": 0,
+  "latency_ms": {
+    "p50": 18.34120857529342,
+    "p95": 39.560598134994486,
+    "p99": 129.4366993452424,
+    "mean": 24.783277934886986
+  },
+  "calibration": {
+    "choice": {
+      "n": 1110,
+      "accuracy": 0.44054054054054054,
+      "nll_mean": 1.2066088611072505,
+      "brier_mean": 0.6689597857927927,
+      "ece_15": 0.10323423423423427
+    }
+  },
+  "metamorphic": {},
+  "scaling": {},
+  "by_experiment": {
+    "semantic_adjudication": {
+      "n": 720,
+      "accuracy": 0.42916666666666664,
+      "nll_mean": 1.1976492957996014,
+      "brier_mean": 0.6609080268472222,
+      "distribution_tv_mean": 0.43343590277777777,
+      "distribution_jsd_mean": 0.15658886027454072,
+      "target_kl_mean": 0.5713555606622981
+    },
+    "semantic_repeatability": {
+      "n": 390,
+      "accuracy": 0.46153846153846156,
+      "nll_mean": 1.2231495970598338,
+      "brier_mean": 0.6838245715384614,
+      "distribution_tv_mean": 0.32128076923076915,
+      "distribution_jsd_mean": 0.08393687740634488,
+      "target_kl_mean": 0.3183374198573425
+    }
+  },
+  "probabilistic": {
+    "multiclass_exact_distribution": {
+      "n": 1110,
+      "tv_mean": 0.3940300450450451,
+      "tv_p95": 0.727155,
+      "jsd_mean": 0.1310624879154449,
+      "kl_target_pred_mean": 0.4824572949740704,
+      "soft_brier_mean": 0.24732550651351348,
+      "hard_accuracy": 0.44054054054054054
+    }
+  },
+  "semantic": {
+    "n": 1110,
+    "tv_mean": 0.3940300450450451,
+    "tv_p95": 0.727155,
+    "jsd_mean": 0.1310624879154449,
+    "kl_target_pred_mean": 0.4824572949740704,
+    "soft_brier_mean": 0.24732550651351348,
+    "modal_accuracy": 0.44054054054054054,
+    "reference_max_mean": 0.677027027027027,
+    "jev_max_mean": 0.4165203603603604,
+    "overconfidence_gap_mean": -0.26050666666666666,
+    "overconfidence_gap_p95": 0.003214999999999931,
+    "reference_entropy_mean": 0.5407834120447098,
+    "jev_entropy_mean": 0.9227429759422537,
+    "entropy_gap_mean": 0.3819595638975441,
+    "by_domain": {
+      "code_review_severity": {
+        "n": 210,
+        "tv_mean": 0.418345,
+        "jsd_mean": 0.1287997341766025,
+        "modal_accuracy": 0.28095238095238095,
+        "overconfidence_gap_mean": -0.27609523809523806,
+        "reference_entropy_mean": 0.5845376646443795,
+        "jev_entropy_mean": 0.9381954498146067
+      },
+      "hardware_fault": {
+        "n": 150,
+        "tv_mean": 0.38279899999999994,
+        "jsd_mean": 0.11317668644871949,
+        "modal_accuracy": 0.58,
+        "overconfidence_gap_mean": -0.32286599999999993,
+        "reference_entropy_mean": 0.614198638909363,
+        "jev_entropy_mean": 0.9697921418808424
+      },
+      "incident_triage": {
+        "n": 210,
+        "tv_mean": 0.38587023809523807,
+        "jsd_mean": 0.12630817814579412,
+        "modal_accuracy": 0.3904761904761905,
+        "overconfidence_gap_mean": -0.2353333333333333,
+        "reference_entropy_mean": 0.5260407405376613,
+        "jev_entropy_mean": 0.9053836476632834
+      },
+      "policy_compliance": {
+        "n": 150,
+        "tv_mean": 0.4937303333333333,
+        "jsd_mean": 0.20147259963644817,
+        "modal_accuracy": 0.43333333333333335,
+        "overconfidence_gap_mean": -0.4331373333333335,
+        "reference_entropy_mean": 0.35907774461820574,
+        "jev_entropy_mean": 0.9505197049890656
+      },
+      "security_classification": {
+        "n": 180,
+        "tv_mean": 0.3368375,
+        "jsd_mean": 0.10894936589764224,
+        "modal_accuracy": 0.7666666666666667,
+        "overconfidence_gap_mean": -0.24797277777777774,
+        "reference_entropy_mean": 0.5261370415898643,
+        "jev_entropy_mean": 0.9160442062219576
+      },
+      "support_routing": {
+        "n": 210,
+        "tv_mean": 0.36370476190476186,
+        "jsd_mean": 0.11951629154328465,
+        "modal_accuracy": 0.2761904761904762,
+        "overconfidence_gap_mean": -0.11298476190476191,
+        "reference_entropy_mean": 0.601676177457564,
+        "jev_entropy_mean": 0.8769445651195539
+      }
+    }
+  }
+}

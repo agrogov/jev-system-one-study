@@ -231,7 +231,7 @@ for nu,s in sorted(noise.items()): noise_lines.append(f"- noise_units={int(nu):>
 risk_lines=[]
 for cov,n,err in risk:risk_lines.append(f"- coverage {pct(cov)} (n={n:,}): modal error {pct(err)}.")
 
-report=f'''# Jev / TypeSafe System One Models: Black-Box Empirical Characterization and Architecture Reconstruction
+report=rf'''# Jev / TypeSafe System One Models: Black-Box Empirical Characterization and Architecture Reconstruction
 
 **Date:** 19 September 2026  
 **Model observed:** `jev-1.13.0` behind the `jev-latest` alias  
@@ -312,7 +312,7 @@ No multiple-hypothesis-correction claim is made. The architecture probes are des
 
 The full isolated run produced:
 
-''' + '\n'.join(q_lines) + f'''
+''' + '\n'.join(q_lines) + rf'''
 
 The endpoint ratio is the key observation. Nominal output accounting rises from {int(q1.output_tokens)} to {int(qn.output_tokens)} tokens (**{qn.output_tokens/q1.output_tokens:.1f}×**), while upstream time changes from {int(q1.upstream_ms)} to {int(qn.upstream_ms)} ms (**{qn.upstream_ms/q1.upstream_ms:.2f}×**). Spearman correlation between nominal output-token count and upstream latency across these eight points is {q_rho:.3f}; the curve is noisy rather than proportional.
 
@@ -324,7 +324,7 @@ The endpoint ratio is the key observation. Nominal output accounting rises from 
 
 ### 4.2 Choice cardinality scaling
 
-''' + '\n'.join(c_lines) + f'''
+''' + '\n'.join(c_lines) + rf'''
 
 From 2 to 255 choices, nominal output accounting rises **{cn.output_tokens/c1.output_tokens:.1f}×**, while measured upstream time is {int(c1.upstream_ms)} ms at 2 choices and {int(cn.upstream_ms)} ms at 255 choices. Spearman correlation between nominal output accounting and latency is {c_rho:.3f}; again the relationship is not remotely compatible with sequential generation of thousands of response tokens.
 
@@ -336,7 +336,7 @@ TypeSafe publicly states that high-cardinality Choice uses a two-stage mechanism
 
 The full isolated context probe produced:
 
-''' + '\n'.join(ctx_lines) + f'''
+''' + '\n'.join(ctx_lines) + rf'''
 
 Unlike question/candidate count, context length eventually increases service time: approximately 21K-token states generally require more time than the ~0.5–7K-token cases. This separation is architecturally suggestive: **state encoding cost grows with state length, while decision fan-out cost is comparatively cheap and parallelized.** Evidence remained correctly usable when placed at the beginning, middle, or end in the tested contexts; no stable lost-in-the-middle failure was demonstrated.
 
@@ -367,7 +367,7 @@ The high correlation means Jev generally moves probability in the correct direct
 
 ### 5.2 Error by task family
 
-''' + '\n'.join(cal_lines) + f'''
+''' + '\n'.join(cal_lines) + rf'''
 
 Direct aleatoric probability is substantially easier for Jev than deriving posteriors from conditional evidence. Rare-base-rate problems show the largest systematic difficulty among the main Bayesian families. Equivalent mathematical problems rendered in different surface forms also produce materially different outputs.
 
@@ -417,13 +417,13 @@ The overconfidence gap CI excludes zero by a very wide margin. Under this benchm
 
 ### 6.2 Ambiguity strata
 
-''' + '\n'.join(ambig_lines) + f'''
+''' + '\n'.join(ambig_lines) + rf'''
 
 The critical pattern is not merely lower accuracy on hard cases. Jev frequently identifies the same modal class as the reference while assigning much more probability mass to it. In other words, top-1 semantic judgment is often strong even when distribution matching is poor.
 
 ### 6.3 Domain breakdown
 
-''' + '\n'.join(domain_lines) + f'''
+''' + '\n'.join(domain_lines) + rf'''
 
 Performance is therefore domain-dependent. Security classification and incident triage are especially strong on modal accuracy; support routing and hardware attribution are materially weaker. This is further evidence against treating one global probability threshold as universally meaningful.
 
@@ -433,7 +433,7 @@ Performance is therefore domain-dependent. Security classification and incident 
 
 For the semantic-adjudication subset:
 
-''' + '\n'.join(noise_lines) + f'''
+''' + '\n'.join(noise_lines) + rf'''
 
 No monotonic degradation with irrelevant-context injection is visible at these tested noise levels. This supports strong semantic robustness in the evaluated range.
 
@@ -441,7 +441,7 @@ No monotonic degradation with irrelevant-context injection is visible at these t
 
 Sorting predictions by returned confidence/top probability and retaining only the most confident subset gives:
 
-''' + '\n'.join(risk_lines) + f'''
+''' + '\n'.join(risk_lines) + rf'''
 
 This is one of Jev's strongest practical results. Even though the absolute probability values are sharper than the reference distributions, confidence still provides a useful **ranking** for automation/escalation. That is the selective-classification use case: abstain/escalate as uncertainty rises rather than assume every score is an externally calibrated posterior.
 
@@ -501,17 +501,17 @@ runtime question representations      runtime candidate/level representations
 
 A mathematical abstraction is:
 
-\[
+$$
 H_x = E_\theta(x)
-\]
+$$
 
-\[
+$$
 z_{{ij}}=g_\theta(H_x, q_i, c_{{ij}})
-\]
+$$
 
-\[
+$$
 P(c_{{ij}}\mid x,q_i)=\operatorname{{softmax}}_j(z_{{ij}})
-\]
+$$
 
 where the state representation is shared and many question/candidate interactions are executed as batched tensor operations. For Noul, the candidate space is effectively binary; Score likely maps ordered levels to a distribution and computes a scalar position from that distribution.
 
@@ -569,19 +569,19 @@ The fundamental distinction demonstrated here is not simply “small model versu
 
 A conventional causal LLM models a token sequence:
 
-\[
+$$
 P(t_1,\ldots,t_T\mid x)=\prod_{{k=1}}^T P(t_k\mid x,t_{{<k}})
-\]
+$$
 
 Even when grammar-constrained, structured output is ordinarily serialized through sequential token decoding.
 
 The Jev observations are instead consistent with direct evaluation of bounded semantic answer spaces:
 
-\[
-(state, question, candidates) \rightarrow \Delta^K
-\]
+$$
+(\text{state}, \text{question}, \text{candidates}) \rightarrow \Delta^K
+$$
 
-where \(\Delta^K\) is a probability simplex over developer-provided candidates. Giving up unrestricted string generation permits much greater batching and removes the inherently serial output loop. This readily explains why thousands of nominal output-accounting tokens need not correspond to thousands of decoder steps.
+where $\Delta^K$ is a probability simplex over developer-provided candidates. Giving up unrestricted string generation permits much greater batching and removes the inherently serial output loop. This readily explains why thousands of nominal output-accounting tokens need not correspond to thousands of decoder steps.
 
 The trade-off is equally important: Jev cannot replace a generative model for code generation, explanation, arbitrary synthesis, or long deliberative reasoning. Its most natural role is inside software as a fast semantic judgment layer, optionally escalating uncertain cases to a larger reasoning model or human.
 
@@ -593,15 +593,15 @@ The earlier SalesRLAgent work shares the broad philosophy of mapping semantic st
 
 However, Jev's observed capability is materially more general: runtime questions and candidate sets define new decision functions without retraining a task-specific output head. Functionally, the distinction is approximately:
 
-\[
+$$
 f_{{sales}}(x)\rightarrow P(\text{{conversion}})
-\]
+$$
 
 versus
 
-\[
+$$
 f(x,q,C)\rightarrow P(C\mid x,q).
-\]
+$$
 
 Thus “built a domain-specific predecessor embodying similar principles” is supported; “implemented the same general Jev architecture” is not established by the 2025 paper alone.
 
@@ -756,7 +756,7 @@ For architecture latency inference, use `x-envoy-upstream-service-time` from `ra
 
 ## Appendix B. Interpretation guide
 
-- **Probability calibration** asks whether predictions assigned probability \(p\) occur at frequency \(p\) on a defined population.
+- **Probability calibration** asks whether predictions assigned probability $p$ occur at frequency $p$ on a defined population.
 - **Sharpness** measures concentration of the predictive distribution; sharpness without calibration can be dangerous.
 - **Selective risk** asks how error changes as low-confidence cases are rejected/escalated.
 - **TV/JSD/KL** measure distance between full distributions, not merely agreement on the top class.
@@ -778,6 +778,6 @@ def clean(x):
     if isinstance(x,(np.floating,)):return None if np.isnan(x) else float(x)
     if isinstance(x,float) and np.isnan(x):return None
     return x
-(OUT/'computed_statistics.json').write_text(json.dumps(clean(stats),indent=2))
+(OUT/'jev_computed_statistics.json').write_text(json.dumps(clean(stats),indent=2))
 print(OUT/'JEV_SYSTEM_ONE_BLACKBOX_REPORT.md')
-print(OUT/'computed_statistics.json')
+print(OUT/'jev_computed_statistics.json')

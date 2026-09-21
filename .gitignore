@@ -2,6 +2,8 @@
 __pycache__/
 *.pyc
 .env
-results/*
-!results/.gitkeep
+jev-results/*
+!jev-results/.gitkeep
 .idea
+.DS_Store
+

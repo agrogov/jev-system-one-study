@@ -1,0 +1,2 @@
+# Reference PyTorch implementation. The package installs its own runtime dependencies.
+laya==0.3.3

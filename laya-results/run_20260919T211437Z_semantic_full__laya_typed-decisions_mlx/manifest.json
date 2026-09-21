@@ -1,0 +1,126 @@
+{
+  "created_at_utc": "2026-09-21T15:04:16.979934+00:00",
+  "provider": "laya-local",
+  "backend": "mlx",
+  "checkpoint": "typed-decisions",
+  "model": "aac6fef/laya-typed-decisions-mlx",
+  "package_version": "0.1.0",
+  "device": null,
+  "dtype": "float16",
+  "batch_size": 16,
+  "model_load_seconds": 0.5554640002083033,
+  "warmup_seconds": 0.023777333088219166,
+  "budget_overrides": {},
+  "effective_limits": {
+    "max_len": 1024,
+    "head_max_len": 256
+  },
+  "source_run": "run_20260919T211437Z_semantic_full",
+  "source_manifest": {
+    "created_at_utc": "2026-09-19T21:14:37.699265+00:00",
+    "model": "jev-latest",
+    "profile": "semantic_full",
+    "seed": 260919,
+    "case_count": 1110,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "config": {
+      "api": {
+        "base_url": "https://api.typesafe.ai",
+        "endpoint": "/v1/systemone",
+        "model": "jev-latest",
+        "timeout_seconds": 60,
+        "concurrency": 4,
+        "max_retries": 5,
+        "min_retry_seconds": 1.0,
+        "max_retry_seconds": 30.0
+      },
+      "run": {
+        "suite": "semantic",
+        "seed": 260919,
+        "output_dir": "results",
+        "profile": "semantic_full",
+        "save_request_bodies": true,
+        "save_response_bodies": true
+      },
+      "profiles": {
+        "semantic_smoke": {
+          "variants_per_scenario": 2,
+          "noise_units": [
+            0,
+            2
+          ],
+          "permute_option_order": true,
+          "ambiguous_repeat_repetitions": 2
+        },
+        "semantic_core": {
+          "variants_per_scenario": 10,
+          "noise_units": [
+            0,
+            2,
+            6,
+            12
+          ],
+          "permute_option_order": true,
+          "ambiguous_repeat_repetitions": 10
+        },
+        "semantic_full": {
+          "variants_per_scenario": 30,
+          "noise_units": [
+            0,
+            2,
+            6,
+            12,
+            24
+          ],
+          "permute_option_order": true,
+          "ambiguous_repeat_repetitions": 30
+        }
+      }
+    },
+    "finished_at_utc": "2026-09-19T21:16:15.963043+00:00",
+    "elapsed_seconds": 98.2136269591283
+  },
+  "source_cases_sha256": "b6424cc592512bd064544822a22399fc66c80b98e6918a62610e264166c54143",
+  "selected_cases_sha256": "b6424cc592512bd064544822a22399fc66c80b98e6918a62610e264166c54143",
+  "preflight": {
+    "cases": 1110,
+    "by_experiment": {
+      "semantic_adjudication": 720,
+      "semantic_repeatability": 390
+    },
+    "questions_per_request": {
+      "count": 1110,
+      "min": 1,
+      "max": 1
+    },
+    "choice_cardinality": {
+      "count": 1110,
+      "min": 4,
+      "max": 4
+    },
+    "score_levels": {
+      "count": 0,
+      "min": null,
+      "max": null
+    },
+    "state_characters": {
+      "count": 1110,
+      "min": 64,
+      "max": 1526
+    }
+  },
+  "case_count": 1110,
+  "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "resume": false,
+  "finished_at_utc": "2026-09-21T15:04:44.856394+00:00",
+  "elapsed_seconds": 27.874730833107606,
+  "requests_total": 1110,
+  "requests_ok": 1110,
+  "requests_failed": 0,
+  "requests_comparable": 1110,
+  "compatibility_status": {
+    "full_input": 1110
+  }
+}

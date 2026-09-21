@@ -1,0 +1,252 @@
+{
+  "requests_total": 31,
+  "requests_ok": 30,
+  "requests_failed": 1,
+  "latency_ms": {
+    "p50": 88.03652040660381,
+    "p95": 3730.996820679859,
+    "p99": 8281.052614995282,
+    "mean": 720.9773165949931
+  },
+  "calibration": {
+    "noul": {
+      "n": 255,
+      "accuracy": 0.6509803921568628,
+      "nll_mean": 0.6639811880059059,
+      "brier_mean": 0.23528377086274507,
+      "ece_15": 0.09954705882352942
+    },
+    "choice": {
+      "n": 22,
+      "accuracy": 0.5909090909090909,
+      "nll_mean": 3.577780062513381,
+      "brier_mean": 0.5275142381818183,
+      "ece_15": 0.3894545454545455
+    }
+  },
+  "metamorphic": {},
+  "scaling": {
+    "context_length_position": [
+      {
+        "context_chars": 500,
+        "evidence_position": "end",
+        "latency_ms": 19.57866712473333,
+        "p_target": 0.6527,
+        "input_tokens": 183
+      },
+      {
+        "context_chars": 500,
+        "evidence_position": "middle",
+        "latency_ms": 22.663583047688007,
+        "p_target": 0.6781,
+        "input_tokens": 184
+      },
+      {
+        "context_chars": 500,
+        "evidence_position": "start",
+        "latency_ms": 27.047582902014256,
+        "p_target": 0.6226,
+        "input_tokens": 183
+      },
+      {
+        "context_chars": 2000,
+        "evidence_position": "end",
+        "latency_ms": 43.02179208025336,
+        "p_target": 0.5409,
+        "input_tokens": 458
+      },
+      {
+        "context_chars": 2000,
+        "evidence_position": "middle",
+        "latency_ms": 52.849499974399805,
+        "p_target": 0.4626,
+        "input_tokens": 461
+      },
+      {
+        "context_chars": 2000,
+        "evidence_position": "start",
+        "latency_ms": 62.56891693919897,
+        "p_target": 0.5731,
+        "input_tokens": 458
+      },
+      {
+        "context_chars": 8000,
+        "evidence_position": "end",
+        "latency_ms": 88.01495796069503,
+        "p_target": 0.2162,
+        "input_tokens": 1024
+      },
+      {
+        "context_chars": 8000,
+        "evidence_position": "middle",
+        "latency_ms": 88.0580828525126,
+        "p_target": 0.3643,
+        "input_tokens": 1024
+      },
+      {
+        "context_chars": 8000,
+        "evidence_position": "start",
+        "latency_ms": 117.15262499637902,
+        "p_target": 0.576,
+        "input_tokens": 1024
+      },
+      {
+        "context_chars": 32000,
+        "evidence_position": "end",
+        "latency_ms": 105.54183297790587,
+        "p_target": 0.2162,
+        "input_tokens": 1024
+      },
+      {
+        "context_chars": 32000,
+        "evidence_position": "middle",
+        "latency_ms": 89.64170794934034,
+        "p_target": 0.2162,
+        "input_tokens": 1024
+      },
+      {
+        "context_chars": 32000,
+        "evidence_position": "start",
+        "latency_ms": 90.44941584579647,
+        "p_target": 0.576,
+        "input_tokens": 1024
+      },
+      {
+        "context_chars": 100000,
+        "evidence_position": "end",
+        "latency_ms": 98.75537501648068,
+        "p_target": 0.2162,
+        "input_tokens": 1024
+      },
+      {
+        "context_chars": 100000,
+        "evidence_position": "middle",
+        "latency_ms": 98.14966702833772,
+        "p_target": 0.2162,
+        "input_tokens": 1024
+      },
+      {
+        "context_chars": 100000,
+        "evidence_position": "start",
+        "latency_ms": 99.01383286342025,
+        "p_target": 0.576,
+        "input_tokens": 1024
+      }
+    ],
+    "parallel_question_scaling": [
+      {
+        "question_count": 1,
+        "latency_ms": 84.03337514027953,
+        "input_tokens": 931,
+        "output_tokens": 0
+      },
+      {
+        "question_count": 2,
+        "latency_ms": 186.62245804443955,
+        "input_tokens": 1862,
+        "output_tokens": 0
+      },
+      {
+        "question_count": 4,
+        "latency_ms": 484.14437496103346,
+        "input_tokens": 3724,
+        "output_tokens": 0
+      },
+      {
+        "question_count": 8,
+        "latency_ms": 790.3019580990076,
+        "input_tokens": 7448,
+        "output_tokens": 0
+      },
+      {
+        "question_count": 16,
+        "latency_ms": 1739.464582875371,
+        "input_tokens": 14896,
+        "output_tokens": 0
+      },
+      {
+        "question_count": 32,
+        "latency_ms": 2407.444874988869,
+        "input_tokens": 29792,
+        "output_tokens": 0
+      },
+      {
+        "question_count": 64,
+        "latency_ms": 4813.902958063409,
+        "input_tokens": 59584,
+        "output_tokens": 0
+      },
+      {
+        "question_count": 128,
+        "latency_ms": 9697.212334023789,
+        "input_tokens": 119168,
+        "output_tokens": 0
+      }
+    ],
+    "choice_cardinality_scaling": [
+      {
+        "cardinality": 2,
+        "latency_ms": 20.113792037591338,
+        "input_tokens": 83,
+        "output_tokens": 0
+      },
+      {
+        "cardinality": 4,
+        "latency_ms": 24.914790876209736,
+        "input_tokens": 119,
+        "output_tokens": 0
+      },
+      {
+        "cardinality": 8,
+        "latency_ms": 36.48370807059109,
+        "input_tokens": 188,
+        "output_tokens": 0
+      },
+      {
+        "cardinality": 16,
+        "latency_ms": 60.07095891982317,
+        "input_tokens": 285,
+        "output_tokens": 0
+      },
+      {
+        "cardinality": 32,
+        "latency_ms": 51.5946252271533,
+        "input_tokens": 269,
+        "output_tokens": 0
+      },
+      {
+        "cardinality": 64,
+        "latency_ms": 58.30833408981562,
+        "input_tokens": 294,
+        "output_tokens": 0
+      },
+      {
+        "cardinality": 128,
+        "latency_ms": 72.19883287325501,
+        "input_tokens": 550,
+        "output_tokens": 0
+      }
+    ]
+  },
+  "by_experiment": {
+    "choice_cardinality_scaling": {
+      "n": 7,
+      "accuracy": 0.5714285714285714,
+      "nll_mean": 9.308232346608705,
+      "brier_mean": 0.6171369328571429
+    },
+    "context_length_position": {
+      "n": 15,
+      "accuracy": 0.6,
+      "nll_mean": 0.9035689966022292,
+      "brier_mean": 0.48569031399999996
+    },
+    "parallel_question_scaling": {
+      "n": 255,
+      "accuracy": 0.6509803921568628,
+      "nll_mean": 0.6639811880059059,
+      "brier_mean": 0.23528377086274507
+    }
+  },
+  "probabilistic": {}
+}

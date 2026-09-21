@@ -1,0 +1,82 @@
+{
+  "requests_total": 5810,
+  "requests_ok": 5810,
+  "requests_failed": 0,
+  "requests_comparable": 5810,
+  "compatibility_status": {
+    "full_input": 5810
+  },
+  "by_experiment": {
+    "prob_base_rate_stress": {
+      "total": 600,
+      "ok": 600,
+      "failed": 0,
+      "full_input": 600,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 600
+    },
+    "prob_bayes_single_signal": {
+      "total": 1500,
+      "ok": 1500,
+      "failed": 0,
+      "full_input": 1500,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 1500
+    },
+    "prob_bayes_two_signals": {
+      "total": 1500,
+      "ok": 1500,
+      "failed": 0,
+      "full_input": 1500,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 1500
+    },
+    "prob_explicit_randomness": {
+      "total": 760,
+      "ok": 760,
+      "failed": 0,
+      "full_input": 760,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 760
+    },
+    "prob_multiclass_bayes": {
+      "total": 1000,
+      "ok": 1000,
+      "failed": 0,
+      "full_input": 1000,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 1000
+    },
+    "prob_repeatability": {
+      "total": 150,
+      "ok": 150,
+      "failed": 0,
+      "full_input": 150,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 150
+    },
+    "prob_representation_invariance": {
+      "total": 300,
+      "ok": 300,
+      "failed": 0,
+      "full_input": 300,
+      "truncated_input": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 300
+    }
+  },
+  "failure_types": {}
+}

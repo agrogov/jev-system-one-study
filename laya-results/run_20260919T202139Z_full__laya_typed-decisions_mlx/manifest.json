@@ -1,0 +1,180 @@
+{
+  "created_at_utc": "2026-09-21T15:02:22.371830+00:00",
+  "provider": "laya-local",
+  "backend": "mlx",
+  "checkpoint": "typed-decisions",
+  "model": "aac6fef/laya-typed-decisions-mlx",
+  "package_version": "0.1.0",
+  "device": null,
+  "dtype": "float16",
+  "batch_size": 16,
+  "model_load_seconds": 0.5554640002083033,
+  "warmup_seconds": 0.023777333088219166,
+  "budget_overrides": {},
+  "effective_limits": {
+    "max_len": 1024,
+    "head_max_len": 256
+  },
+  "source_run": "run_20260919T202139Z_full",
+  "source_manifest": {
+    "created_at_utc": "2026-09-19T20:21:39.689683+00:00",
+    "model": "jev-latest",
+    "profile": "full",
+    "seed": 260919,
+    "case_count": 31,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "config": {
+      "api": {
+        "base_url": "https://api.typesafe.ai",
+        "endpoint": "/v1/systemone",
+        "model": "jev-latest",
+        "timeout_seconds": 60,
+        "concurrency": 1,
+        "max_retries": 5,
+        "min_retry_seconds": 1.0,
+        "max_retry_seconds": 30.0
+      },
+      "run": {
+        "seed": 260919,
+        "output_dir": "results",
+        "profile": "full",
+        "repetitions": 8,
+        "save_request_bodies": true,
+        "save_response_bodies": true
+      },
+      "profiles": {
+        "smoke": {
+          "calibration_cases_per_family": 8,
+          "permutation_trials": 4,
+          "paraphrase_trials": 3,
+          "repeatability_repetitions": 4,
+          "parallel_question_counts": [
+            1,
+            4,
+            16
+          ],
+          "cardinalities": [
+            2,
+            8,
+            32
+          ],
+          "context_chars": [
+            500,
+            4000
+          ]
+        },
+        "core": {
+          "calibration_cases_per_family": 50,
+          "permutation_trials": 16,
+          "paraphrase_trials": 8,
+          "repeatability_repetitions": 12,
+          "parallel_question_counts": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "cardinalities": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128
+          ],
+          "context_chars": [
+            500,
+            2000,
+            8000,
+            32000
+          ]
+        },
+        "full": {
+          "calibration_cases_per_family": 200,
+          "permutation_trials": 64,
+          "paraphrase_trials": 24,
+          "repeatability_repetitions": 40,
+          "parallel_question_counts": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128
+          ],
+          "cardinalities": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128,
+            255
+          ],
+          "context_chars": [
+            500,
+            2000,
+            8000,
+            32000,
+            100000
+          ]
+        }
+      }
+    },
+    "finished_at_utc": "2026-09-19T20:21:51.097306+00:00",
+    "elapsed_seconds": 11.395026457961649
+  },
+  "source_cases_sha256": "7ae6e0c5be51233a56756ba35ae290e232b3b6110d4ed7d67687dcb0461a12ce",
+  "selected_cases_sha256": "7ae6e0c5be51233a56756ba35ae290e232b3b6110d4ed7d67687dcb0461a12ce",
+  "preflight": {
+    "cases": 31,
+    "by_experiment": {
+      "choice_cardinality_scaling": 8,
+      "context_length_position": 15,
+      "parallel_question_scaling": 8
+    },
+    "questions_per_request": {
+      "count": 31,
+      "min": 1,
+      "max": 128
+    },
+    "choice_cardinality": {
+      "count": 23,
+      "min": 2,
+      "max": 255
+    },
+    "score_levels": {
+      "count": 0,
+      "min": null,
+      "max": null
+    },
+    "state_characters": {
+      "count": 31,
+      "min": 154,
+      "max": 100120
+    }
+  },
+  "case_count": 31,
+  "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "resume": false,
+  "finished_at_utc": "2026-09-21T15:02:44.017916+00:00",
+  "elapsed_seconds": 21.645321208052337,
+  "requests_total": 31,
+  "requests_ok": 30,
+  "requests_failed": 1,
+  "requests_comparable": 21,
+  "compatibility_status": {
+    "full_input": 21,
+    "truncated_input": 9,
+    "unsupported_cardinality": 1
+  }
+}

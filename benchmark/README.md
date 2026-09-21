@@ -634,3 +634,11 @@ This unified `1.0.0` repository supersedes the three working benchmark packages 
 - v0.3 semantic-calibration extension.
 
 All experiment generators, metrics, reports, and configs are now present in this single tree. `config/default.yaml` remains only for compatibility and is identical to `config/architecture.yaml`.
+
+<!-- LAYA-COMPARISON-EXTENSION -->
+
+## Laya replay comparison
+
+A local Laya provider/replay adapter is available in this study tree. It replays the exact five recorded Jev `cases.jsonl` inputs and generates directly comparable raw and normalized results.
+
+See [`LAYA_COMPARISON.md`](LAYA_COMPARISON.md) for Apple Silicon/MLX installation, exact commands, fairness constraints, output structure, specialist-vs-base checkpoint guidance, and comparison reporting.
