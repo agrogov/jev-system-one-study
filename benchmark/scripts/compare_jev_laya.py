@@ -241,7 +241,7 @@ def main() -> None:
     sections.append("The comparison replays byte-identical `cases.jsonl` inputs from the five recorded Jev runs. Laya coverage failures are reported rather than silently dropping or mutating unsupported cases. Absolute latency is not hardware-equivalent: Jev is a remote service, whereas Laya runs locally; scaling shape and local latency are reported separately.\n")
 
     for source_name in SOURCE_RUNS:
-        jev_dir = study / "results" / source_name
+        jev_dir = study / "jev-results" / source_name
         laya_dir = laya_root / f"{source_name}__laya_{slug(args.checkpoint)}_{slug(args.backend)}"
         if not jev_dir.is_dir():
             raise FileNotFoundError(jev_dir)

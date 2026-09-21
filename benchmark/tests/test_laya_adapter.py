@@ -113,7 +113,7 @@ class LayaAdapterTests(unittest.TestCase):
     def test_selected_cases_file_matches_max_cases(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
-            source = root / "results" / "run_test"
+            source = root / "jev-results" / "run_test"
             source.mkdir(parents=True)
             (root / "benchmark").mkdir()
             cases = []

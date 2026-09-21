@@ -387,8 +387,8 @@ def validate_and_normalize_result(
 
 def locate_study_root(path: Path) -> Path:
     path = path.expanduser().resolve()
-    if not (path / "results").is_dir():
-        raise FileNotFoundError(f"Study root has no results/ directory: {path}")
+    if not (path / "jev-results").is_dir():
+        raise FileNotFoundError(f"Study root has no jev-results/ directory: {path}")
     if not (path / "benchmark").is_dir():
         raise FileNotFoundError(f"Study root has no benchmark/ directory: {path}")
     return path
@@ -398,7 +398,7 @@ def resolve_source_runs(study_root: Path, names: Sequence[str] | None) -> list[P
     wanted = tuple(names) if names else DEFAULT_SOURCE_RUNS
     paths: list[Path] = []
     for name in wanted:
-        candidate = study_root / "results" / name
+        candidate = study_root / "jev-results" / name
         if not candidate.is_dir():
             raise FileNotFoundError(f"Missing source run: {candidate}")
         if not (candidate / "cases.jsonl").is_file():
@@ -786,7 +786,7 @@ def auto_backend() -> str:
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--study-root", type=Path, required=True, help="Path containing benchmark/ and results/")
+    p.add_argument("--study-root", type=Path, required=True, help="Path containing benchmark/ and jev-results/")
     p.add_argument("--backend", choices=["auto", "mlx", "torch", "mock"], default="auto")
     p.add_argument("--checkpoint", choices=["base", "typed-decisions", "multilingual"], default="typed-decisions")
     p.add_argument("--model-ref", help="Override the checkpoint repository or local model directory")

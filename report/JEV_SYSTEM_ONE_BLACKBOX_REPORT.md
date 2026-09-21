@@ -50,11 +50,11 @@ These are product/company claims; no public reproducible RLCD paper or full arch
 
 Five recorded result directories were used:
 
-- `../jev-results` — 303-request concurrent architecture/robustness benchmark.
-- `../jev-results` — 26-request isolated `concurrency=1` architecture probe.
-- `../jev-results` — 31-request isolated full scaling probe reaching 128 questions, 255 choices, and approximately 21K input tokens.
-- `../jev-results` — 5,810-request synthetic exact-probability study.
-- `../jev-results` — 1,110-request six-domain semantic study.
+- `../jev-results/run_20260919T201050Z_core` — 303-request concurrent architecture/robustness benchmark.
+- `../jev-results/run_20260919T201739Z_core` — 26-request isolated `concurrency=1` architecture probe.
+- `../jev-results/run_20260919T202139Z_full` — 31-request isolated full scaling probe reaching 128 questions, 255 choices, and approximately 21K input tokens.
+- `../jev-results/run_20260919T203758Z_calibration_full` — 5,810-request synthetic exact-probability study.
+- `../jev-results/run_20260919T211437Z_semantic_full` — 1,110-request six-domain semantic study.
 
 Each directory is self-contained and preserves its own `manifest.json`, generated `cases.jsonl`, raw API `raw.jsonl`, normalized data, summary, report, and figures. No legacy source-result ZIP archives are required by the analysis.
 
@@ -327,7 +327,7 @@ z_{ij}=g_\theta(H_x, q_i, c_{ij})
 $$
 
 $$
-P(c_{ij}\mid x,q_i)=\operatorname{softmax}_j(z_{ij})
+P(c_{ij}\mid x,q_i)=\mathrm{softmax}_j(z_{ij})
 $$
 
 where the state representation is shared and many question/candidate interactions are executed as batched tensor operations. For Noul, the candidate space is effectively binary; Score likely maps ordered levels to a distribution and computes a scalar position from that distribution.
@@ -581,4 +581,4 @@ For architecture latency inference, use `x-envoy-upstream-service-time` from `ra
 
 ## Appendix C. Accompanying artifact bundle
 
-The complete bundle contains the unified `benchmark/` codebase, this `report/`, and all five self-contained raw `../jev-results` directories. Older development benchmark packages and duplicate source-result archives are intentionally excluded because `benchmark/` v1.0.0 and the extracted result directories supersede them.
+The complete bundle contains the unified `benchmark/` codebase, this `report/`, and all five self-contained raw `../jev-results/` run directories. Older development benchmark packages and duplicate source-result archives are intentionally excluded because `benchmark/` v1.0.0 and the extracted result directories supersede them.

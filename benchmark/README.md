@@ -269,7 +269,7 @@ profile=semantic_full cases=1110
 
 ## 9. The five study runs reproduced by the report
 
-The research report is based on the following five result directories. The final research bundle includes all five raw folders under `results/`.
+The research report is based on the following five result directories. The final research bundle includes all five raw folders under `../jev-results/`.
 
 ### Run 1 — architecture/robustness core, concurrent
 

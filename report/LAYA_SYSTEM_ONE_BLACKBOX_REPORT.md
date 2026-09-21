@@ -161,7 +161,7 @@ High-confidence findings from the black-box evidence:
 
 ## 9. Reproducibility and preserved evidence
 
-The repository preserves every primary run with `manifest.json`, `cases.jsonl`, `raw.jsonl`, `normalized.csv`, `summary.json`, compatibility metadata, per-run reports, and figures. Smoke and validation runs are separately archived as development evidence. The adapter/configuration used for local Laya replay is included under `../benchmark` so the study can be rerun against the same source cases.
+The repository preserves every primary run with `manifest.json`, `cases.jsonl`, `raw.jsonl`, `normalized.csv`, `summary.json`, compatibility metadata, per-run reports, and figures. The adapter/configuration used for local Laya replay is included under `../benchmark` so the study can be rerun against the same source cases.
 
 ## Conclusion
 

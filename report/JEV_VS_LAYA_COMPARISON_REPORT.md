@@ -114,7 +114,7 @@ Accordingly, Laya should be described as reproducing the **typed-decision abstra
 
 ## 9. Preserved evidence
 
-The repository includes all five primary Laya runs, the generated machine-readable comparison files, the earlier smoke/validation runs, and the exact adapter/configuration used for replay. No duplicate ZIP archives are needed: extracted raw result directories are the canonical evidence.
+The repository includes all five primary Laya runs, the generated machine-readable comparison files, and the exact adapter/configuration used for replay. No duplicate ZIP archives are needed: extracted raw result directories are the canonical evidence.
 
 ## Conclusion
 

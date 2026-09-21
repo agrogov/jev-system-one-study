@@ -2,7 +2,7 @@
 
 This extension runs the **same recorded benchmark inputs** against a local Laya checkpoint and compares the result with the five preserved Jev runs.
 
-It does not regenerate the benchmark. It replays the exact `cases.jsonl` files already stored under `results/`, which guarantees that both providers receive byte-identical states, question instructions, criteria, option order, target metadata, and case IDs.
+It does not regenerate the benchmark. It replays the exact `cases.jsonl` files already stored under `jev-results/`, which guarantees that both providers receive byte-identical states, question instructions, criteria, option order, target metadata, and case IDs.
 
 ## Why two Laya checkpoints matter
 
@@ -44,7 +44,7 @@ The first load downloads model files; subsequent runs use the local cache.
 From the downloaded extension directory:
 
 ```bash
-./install_into_study.sh /Users/arogov/Downloads/jev-system-one-study-complete
+./install_into_study.sh ~/Downloads/jev-system-one-study-complete
 ```
 
 The installer also detects an archive layout where the actual root is nested at:
@@ -60,11 +60,11 @@ It copies only the Laya adapter/config/docs/tests and appends one marked README 
 Use the benchmark's existing Python 3.12 virtual environment if available:
 
 ```bash
-cd /Users/arogov/Downloads/jev-system-one-study-complete
+cd ~/Downloads/jev-system-one-study-complete
 source benchmark/.venv/bin/activate
 ```
 
-If the bundle root is nested, `cd` to the directory containing `benchmark/` and `results/`.
+If the bundle root is nested, `cd` to the directory containing `benchmark/` and `jev-results/`.
 
 Install the native runtime:
 
