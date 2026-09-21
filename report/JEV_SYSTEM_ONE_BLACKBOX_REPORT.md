@@ -387,7 +387,7 @@ The fundamental distinction demonstrated here is not simply “small model versu
 A conventional causal LLM models a token sequence:
 
 $$
-P(t_1,\ldots,t_T\mid x)=\prod_{k=1}^T P(t_k\mid x,t_{<k})
+P(t_1,\ldots,t_T\mid x)=\prod_{k=1}^T P(t_k\mid x,t_{\lt k})
 $$
 
 Even when grammar-constrained, structured output is ordinarily serialized through sequential token decoding.
