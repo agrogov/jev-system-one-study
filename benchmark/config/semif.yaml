@@ -1,0 +1,21 @@
+# Documentation-only defaults for scripts/run_semif_benchmark.py.
+# The replay script takes CLI arguments so the original benchmark YAML files and
+# recorded cases remain unchanged.
+semif:
+  repository: https://github.com/TheoLeeCJ/SemIf
+  commit: ca3ba65f142967030ecb453346e94d6f476a69df
+  backend: mlx
+  model: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+  precision: source (BF16 with some FP32 parameters)   # --mlx-bits 4/8 only as a labelled experiment
+  max_input_tokens: 65536      # SemIf's own default is 4096; it refuses instead of truncating
+  max_options: 16              # answer slots A-P
+  primitive_mapping:
+    noul: fixed yes/no options, noul = P(yes)
+    choice: criteria are the options
+    score: ordinal criteria are the options, score = expected index
+  execution_mapping:
+    one_question: direct
+    many_questions: shared      # one state prefill, parallel question suffixes
+  local_concurrency: 1
+  warmup: true

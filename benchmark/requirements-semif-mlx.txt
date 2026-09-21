@@ -1,0 +1,10 @@
+# Apple Silicon (macOS arm64) baseline used by the SemIf replay adapter.
+# Requires Python 3.10+, Git, Metal, and ~9 GB of free disk for the Qwen3.5-4B checkpoint.
+# SemIf is pinned to the reviewed commit; its [mlx] extra pins mlx==0.32.2 and the mlx-lm commit
+# it was validated against. Installing SemIf also installs torch/transformers (imported but unused
+# on the MLX path).
+semif-phase1[mlx] @ git+https://github.com/TheoLeeCJ/SemIf.git@ca3ba65f142967030ecb453346e94d6f476a69df
+# Analysis/reporting dependencies of benchmark/src/jevbench (same ranges as benchmark/pyproject.toml).
+pandas>=2.2,<3
+matplotlib>=3.8,<4
+PyYAML>=6,<7

@@ -382,6 +382,7 @@ def validate_and_normalize_result(
             "output_tokens": json_safe(usage.get("output_tokens", 0)),
         },
         **({"routing": json_safe(result["routing"])} if "routing" in result else {}),
+        **({"provider_meta": json_safe(result["provider_meta"])} if "provider_meta" in result else {}),
     }
 
 
@@ -536,6 +537,12 @@ def classify_error_compatibility(error: str | None, error_type: str | None) -> t
     text = (error or "").lower()
     if "too many options" in text and ("token budget" in text or "options" in text):
         return "unsupported_cardinality", False, error
+    # SemIf's answer slots are the letters A-P; validate_row rejects anything outside 2-16 options.
+    if "options must contain" in text:
+        return "unsupported_cardinality", False, error
+    # SemIf refuses to truncate: an over-long prompt is an explicit refusal, not silent truncation.
+    if "no truncation allowed" in text:
+        return "input_too_long", False, error
     return "backend_error", False, f"{error_type or 'Error'}: {error}" if error else error_type
 
 
@@ -593,7 +600,7 @@ def compatibility_summary(raw_rows: Iterable[dict[str, Any]]) -> dict[str, Any]:
         statuses[status] = statuses.get(status, 0) + 1
         slot = by_exp.setdefault(
             exp,
-            {"total": 0, "ok": 0, "failed": 0, "full_input": 0, "truncated_input": 0, "unsupported_cardinality": 0, "backend_error": 0, "comparable": 0},
+            {"total": 0, "ok": 0, "failed": 0, "full_input": 0, "truncated_input": 0, "input_too_long": 0, "unsupported_cardinality": 0, "backend_error": 0, "comparable": 0},
         )
         slot["total"] += 1
         if row.get("ok"):
@@ -629,12 +636,14 @@ def run_source(
     progress_every: int,
     budget_overrides: dict[str, Any],
     do_analyze: bool,
+    family: str = "laya",
+    extra_manifest: Mapping[str, Any] | None = None,
 ) -> Path:
     cases = read_jsonl(source_run / "cases.jsonl")
     if max_cases is not None:
         cases = cases[: max(0, max_cases)]
 
-    run_slug = f"{source_run.name}__laya_{slug(checkpoint)}_{slug(backend.info.name)}"
+    run_slug = f"{source_run.name}__{family}_{slug(checkpoint)}_{slug(backend.info.name)}"
     out_dir = output_root / run_slug
     out_dir.mkdir(parents=True, exist_ok=True)
     raw_path = out_dir / "raw.jsonl"
@@ -653,7 +662,7 @@ def run_source(
     source_manifest = json.loads((source_run / "manifest.json").read_text(encoding="utf-8"))
     manifest = {
         "created_at_utc": utc_now(),
-        "provider": "laya-local",
+        "provider": f"{family}-local",
         "backend": backend.info.name,
         "checkpoint": checkpoint,
         "model": backend.info.model_ref,
@@ -674,6 +683,7 @@ def run_source(
         "python": sys.version,
         "platform": platform.platform(),
         "resume": resume,
+        **(dict(extra_manifest) if extra_manifest else {}),
     }
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
@@ -730,9 +740,9 @@ def run_source(
             "attempts": 1,
             "response": response,
             "response_headers": {
-                "x-local-provider": "laya",
-                "x-laya-backend": backend.info.name,
-                "x-laya-inference-time-ms": f"{latency_ms:.6f}",
+                "x-local-provider": family,
+                f"x-{family}-backend": backend.info.name,
+                f"x-{family}-inference-time-ms": f"{latency_ms:.6f}",
             },
             "error": error,
             "error_type": error_type,

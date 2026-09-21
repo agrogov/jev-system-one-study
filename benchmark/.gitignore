@@ -5,3 +5,4 @@ __pycache__/
 results/*
 !results/.gitkeep
 .DS_Store
+.venv-semif

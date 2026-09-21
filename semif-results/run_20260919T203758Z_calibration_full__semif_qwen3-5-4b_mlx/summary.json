@@ -1,0 +1,1028 @@
+{
+  "requests_total": 5810,
+  "requests_ok": 5810,
+  "requests_failed": 0,
+  "latency_ms": {
+    "p50": 206.07047947123647,
+    "p95": 264.50490014394745,
+    "p99": 265.58606885606423,
+    "mean": 204.5164934749412
+  },
+  "calibration": {
+    "noul": {
+      "n": 4810,
+      "accuracy": 0.7780555555555555,
+      "nll_mean": 0.513206974479891,
+      "brier_mean": 0.1676489326161594,
+      "ece_15": 0.05805759827723785
+    },
+    "choice": {
+      "n": 1000,
+      "accuracy": 0.609,
+      "nll_mean": 1.0140645932200825,
+      "brier_mean": 0.5479039975439437,
+      "ece_15": 0.14647689533860153
+    }
+  },
+  "metamorphic": {
+    "prob_representation_invariance": {
+      "groups": [
+        {
+          "group": "representation_0000",
+          "n": 3,
+          "target_probability": 0.027027027027027018,
+          "p_mean": 0.3257078281365208,
+          "p_std": 0.0817756319762363,
+          "p_range": 0.19273848598183016
+        },
+        {
+          "group": "representation_0001",
+          "n": 3,
+          "target_probability": 0.6785714285714285,
+          "p_mean": 0.7365856111378811,
+          "p_std": 0.04355860263309261,
+          "p_range": 0.09240174990260996
+        },
+        {
+          "group": "representation_0002",
+          "n": 3,
+          "target_probability": 0.058823529411764684,
+          "p_mean": 0.32199020437470766,
+          "p_std": 0.03928011009187493,
+          "p_range": 0.08332569663515671
+        },
+        {
+          "group": "representation_0003",
+          "n": 3,
+          "target_probability": 0.5,
+          "p_mean": 0.7203949461337702,
+          "p_std": 0.04881870977949371,
+          "p_range": 0.10356012220157407
+        },
+        {
+          "group": "representation_0004",
+          "n": 3,
+          "target_probability": 0.6176470588235294,
+          "p_mean": 0.7422805011934556,
+          "p_std": 0.06485712170780944,
+          "p_range": 0.14683191307356702
+        },
+        {
+          "group": "representation_0005",
+          "n": 3,
+          "target_probability": 0.11864406779661014,
+          "p_mean": 0.34965866723171474,
+          "p_std": 0.04078219467605407,
+          "p_range": 0.08651209922132325
+        },
+        {
+          "group": "representation_0006",
+          "n": 3,
+          "target_probability": 0.4285714285714286,
+          "p_mean": 0.7107631016457038,
+          "p_std": 0.06244019488518593,
+          "p_range": 0.13245565566577366
+        },
+        {
+          "group": "representation_0007",
+          "n": 3,
+          "target_probability": 0.3684210526315788,
+          "p_mean": 0.43798250859545856,
+          "p_std": 0.02509005962192128,
+          "p_range": 0.06145722658031355
+        },
+        {
+          "group": "representation_0008",
+          "n": 3,
+          "target_probability": 0.8260869565217391,
+          "p_mean": 0.7613867810790848,
+          "p_std": 0.027784430522166604,
+          "p_range": 0.06712819910961632
+        },
+        {
+          "group": "representation_0009",
+          "n": 3,
+          "target_probability": 0.25,
+          "p_mean": 0.6592101089888246,
+          "p_std": 0.04829080745653634,
+          "p_range": 0.11311842788294157
+        },
+        {
+          "group": "representation_0010",
+          "n": 3,
+          "target_probability": 0.8289473684210527,
+          "p_mean": 0.773848760590092,
+          "p_std": 0.04877481932341816,
+          "p_range": 0.1117894483566324
+        },
+        {
+          "group": "representation_0011",
+          "n": 3,
+          "target_probability": 0.6829268292682926,
+          "p_mean": 0.7326486567053889,
+          "p_std": 0.07838082848966949,
+          "p_range": 0.17572744653776662
+        },
+        {
+          "group": "representation_0012",
+          "n": 3,
+          "target_probability": 0.20588235294117635,
+          "p_mean": 0.39793401149802593,
+          "p_std": 0.037008616297981016,
+          "p_range": 0.08917836378025612
+        },
+        {
+          "group": "representation_0013",
+          "n": 3,
+          "target_probability": 0.25,
+          "p_mean": 0.36985971335844536,
+          "p_std": 0.05887897225452859,
+          "p_range": 0.14360852695121312
+        },
+        {
+          "group": "representation_0014",
+          "n": 3,
+          "target_probability": 0.11864406779661014,
+          "p_mean": 0.34965866723171474,
+          "p_std": 0.04078219467605407,
+          "p_range": 0.08651209922132325
+        },
+        {
+          "group": "representation_0015",
+          "n": 3,
+          "target_probability": 0.6923076923076924,
+          "p_mean": 0.7296695576368831,
+          "p_std": 0.03570242840604988,
+          "p_range": 0.07573628769223528
+        },
+        {
+          "group": "representation_0016",
+          "n": 3,
+          "target_probability": 0.25,
+          "p_mean": 0.36985971335844536,
+          "p_std": 0.05887897225452859,
+          "p_range": 0.14360852695121312
+        },
+        {
+          "group": "representation_0017",
+          "n": 3,
+          "target_probability": 0.9032258064516128,
+          "p_mean": 0.7850697370493491,
+          "p_std": 0.1155843303452628,
+          "p_range": 0.2583377467760277
+        },
+        {
+          "group": "representation_0018",
+          "n": 3,
+          "target_probability": 0.95,
+          "p_mean": 0.7937327194459788,
+          "p_std": 0.04945524768653917,
+          "p_range": 0.12089422333830568
+        },
+        {
+          "group": "representation_0019",
+          "n": 3,
+          "target_probability": 0.050000000000000044,
+          "p_mean": 0.36212572777672825,
+          "p_std": 0.0821430499792683,
+          "p_range": 0.19984920525624866
+        },
+        {
+          "group": "representation_0020",
+          "n": 3,
+          "target_probability": 0.5,
+          "p_mean": 0.7268667403452268,
+          "p_std": 0.06001711592185007,
+          "p_range": 0.14683191307356702
+        },
+        {
+          "group": "representation_0021",
+          "n": 3,
+          "target_probability": 0.6923076923076924,
+          "p_mean": 0.7296695576368831,
+          "p_std": 0.03570242840604988,
+          "p_range": 0.07573628769223528
+        },
+        {
+          "group": "representation_0022",
+          "n": 3,
+          "target_probability": 0.05645161290322578,
+          "p_mean": 0.3336599642157286,
+          "p_std": 0.07437391834207564,
+          "p_range": 0.16888207774420677
+        },
+        {
+          "group": "representation_0023",
+          "n": 3,
+          "target_probability": 0.3684210526315788,
+          "p_mean": 0.43798250859545856,
+          "p_std": 0.02509005962192128,
+          "p_range": 0.06145722658031355
+        },
+        {
+          "group": "representation_0024",
+          "n": 3,
+          "target_probability": 0.07692307692307691,
+          "p_mean": 0.34163998558329034,
+          "p_std": 0.0567150129021229,
+          "p_range": 0.1383919786759351
+        },
+        {
+          "group": "representation_0025",
+          "n": 3,
+          "target_probability": 0.9032258064516128,
+          "p_mean": 0.7850697370493491,
+          "p_std": 0.1155843303452628,
+          "p_range": 0.2583377467760277
+        },
+        {
+          "group": "representation_0026",
+          "n": 3,
+          "target_probability": 0.9109589041095889,
+          "p_mean": 0.7966879797516385,
+          "p_std": 0.029537966538741054,
+          "p_range": 0.0626594893260154
+        },
+        {
+          "group": "representation_0027",
+          "n": 3,
+          "target_probability": 0.05645161290322578,
+          "p_mean": 0.3336599642157286,
+          "p_std": 0.07437391834207564,
+          "p_range": 0.16888207774420677
+        },
+        {
+          "group": "representation_0028",
+          "n": 3,
+          "target_probability": 0.9032258064516128,
+          "p_mean": 0.7850697370493491,
+          "p_std": 0.1155843303452628,
+          "p_range": 0.2583377467760277
+        },
+        {
+          "group": "representation_0029",
+          "n": 3,
+          "target_probability": 0.05645161290322578,
+          "p_mean": 0.3336599642157286,
+          "p_std": 0.07437391834207564,
+          "p_range": 0.16888207774420677
+        },
+        {
+          "group": "representation_0030",
+          "n": 3,
+          "target_probability": 0.9545454545454545,
+          "p_mean": 0.8304679148288413,
+          "p_std": 0.07110667204731273,
+          "p_range": 0.16225082742434382
+        },
+        {
+          "group": "representation_0031",
+          "n": 3,
+          "target_probability": 0.07692307692307691,
+          "p_mean": 0.34163998558329034,
+          "p_std": 0.0567150129021229,
+          "p_range": 0.1383919786759351
+        },
+        {
+          "group": "representation_0032",
+          "n": 3,
+          "target_probability": 0.11864406779661014,
+          "p_mean": 0.34965866723171474,
+          "p_std": 0.04078219467605407,
+          "p_range": 0.08651209922132325
+        },
+        {
+          "group": "representation_0033",
+          "n": 3,
+          "target_probability": 0.6829268292682926,
+          "p_mean": 0.7326486567053889,
+          "p_std": 0.07838082848966949,
+          "p_range": 0.17572744653776662
+        },
+        {
+          "group": "representation_0034",
+          "n": 3,
+          "target_probability": 0.15217391304347824,
+          "p_mean": 0.36909664509091816,
+          "p_std": 0.04990709227924808,
+          "p_range": 0.1170021982895949
+        },
+        {
+          "group": "representation_0035",
+          "n": 3,
+          "target_probability": 0.09999999999999998,
+          "p_mean": 0.3614351964274474,
+          "p_std": 0.0698800339916563,
+          "p_range": 0.16888207774420677
+        },
+        {
+          "group": "representation_0036",
+          "n": 3,
+          "target_probability": 0.5,
+          "p_mean": 0.7268667403452268,
+          "p_std": 0.06001711592185007,
+          "p_range": 0.14683191307356702
+        },
+        {
+          "group": "representation_0037",
+          "n": 3,
+          "target_probability": 0.050000000000000044,
+          "p_mean": 0.36212572777672825,
+          "p_std": 0.0821430499792683,
+          "p_range": 0.19984920525624866
+        },
+        {
+          "group": "representation_0038",
+          "n": 3,
+          "target_probability": 0.20588235294117635,
+          "p_mean": 0.39793401149802593,
+          "p_std": 0.037008616297981016,
+          "p_range": 0.08917836378025612
+        },
+        {
+          "group": "representation_0039",
+          "n": 3,
+          "target_probability": 0.9779411764705882,
+          "p_mean": 0.8546395577611294,
+          "p_std": 0.0546874239111807,
+          "p_range": 0.11600954487965764
+        },
+        {
+          "group": "representation_0040",
+          "n": 3,
+          "target_probability": 0.05645161290322578,
+          "p_mean": 0.3336599642157286,
+          "p_std": 0.07437391834207564,
+          "p_range": 0.16888207774420677
+        },
+        {
+          "group": "representation_0041",
+          "n": 3,
+          "target_probability": 0.8260869565217391,
+          "p_mean": 0.7613867810790848,
+          "p_std": 0.027784430522166604,
+          "p_range": 0.06712819910961632
+        },
+        {
+          "group": "representation_0042",
+          "n": 3,
+          "target_probability": 0.058823529411764684,
+          "p_mean": 0.32199020437470766,
+          "p_std": 0.03928011009187493,
+          "p_range": 0.08332569663515671
+        },
+        {
+          "group": "representation_0043",
+          "n": 3,
+          "target_probability": 0.05645161290322578,
+          "p_mean": 0.3336599642157286,
+          "p_std": 0.07437391834207564,
+          "p_range": 0.16888207774420677
+        },
+        {
+          "group": "representation_0044",
+          "n": 3,
+          "target_probability": 0.43749999999999994,
+          "p_mean": 0.42805159817953037,
+          "p_std": 0.037888047691545204,
+          "p_range": 0.0912499578280983
+        },
+        {
+          "group": "representation_0045",
+          "n": 3,
+          "target_probability": 0.43749999999999994,
+          "p_mean": 0.42805159817953037,
+          "p_std": 0.037888047691545204,
+          "p_range": 0.0912499578280983
+        },
+        {
+          "group": "representation_0046",
+          "n": 3,
+          "target_probability": 0.4285714285714286,
+          "p_mean": 0.7107631016457038,
+          "p_std": 0.06244019488518593,
+          "p_range": 0.13245565566577366
+        },
+        {
+          "group": "representation_0047",
+          "n": 3,
+          "target_probability": 0.8289473684210527,
+          "p_mean": 0.773848760590092,
+          "p_std": 0.04877481932341816,
+          "p_range": 0.1117894483566324
+        },
+        {
+          "group": "representation_0048",
+          "n": 3,
+          "target_probability": 0.75,
+          "p_mean": 0.7649799843695527,
+          "p_std": 0.06118478088851379,
+          "p_range": 0.13839577701825068
+        },
+        {
+          "group": "representation_0049",
+          "n": 3,
+          "target_probability": 0.6176470588235294,
+          "p_mean": 0.7422805011934556,
+          "p_std": 0.06485712170780944,
+          "p_range": 0.14683191307356702
+        },
+        {
+          "group": "representation_0050",
+          "n": 3,
+          "target_probability": 0.43749999999999994,
+          "p_mean": 0.42805159817953037,
+          "p_std": 0.037888047691545204,
+          "p_range": 0.0912499578280983
+        },
+        {
+          "group": "representation_0051",
+          "n": 3,
+          "target_probability": 0.058823529411764684,
+          "p_mean": 0.32199020437470766,
+          "p_std": 0.03928011009187493,
+          "p_range": 0.08332569663515671
+        },
+        {
+          "group": "representation_0052",
+          "n": 3,
+          "target_probability": 0.10937500000000007,
+          "p_mean": 0.40938490029017904,
+          "p_std": 0.0731637799710832,
+          "p_range": 0.17917869917539303
+        },
+        {
+          "group": "representation_0053",
+          "n": 3,
+          "target_probability": 0.30769230769230776,
+          "p_mean": 0.6919171629885907,
+          "p_std": 0.07601139626762599,
+          "p_range": 0.1846332612206214
+        },
+        {
+          "group": "representation_0054",
+          "n": 3,
+          "target_probability": 0.005813953488372098,
+          "p_mean": 0.32259505065256017,
+          "p_std": 0.12577667427935255,
+          "p_range": 0.2772998611746912
+        },
+        {
+          "group": "representation_0055",
+          "n": 3,
+          "target_probability": 0.875,
+          "p_mean": 0.7938993320270002,
+          "p_std": 0.08213607973240734,
+          "p_range": 0.18785706062677765
+        },
+        {
+          "group": "representation_0056",
+          "n": 3,
+          "target_probability": 0.875,
+          "p_mean": 0.7938993320270002,
+          "p_std": 0.08213607973240734,
+          "p_range": 0.18785706062677765
+        },
+        {
+          "group": "representation_0057",
+          "n": 3,
+          "target_probability": 0.01219512195121951,
+          "p_mean": 0.27214342909720873,
+          "p_std": 0.054861364318220356,
+          "p_range": 0.1259449965086369
+        },
+        {
+          "group": "representation_0058",
+          "n": 3,
+          "target_probability": 0.6785714285714285,
+          "p_mean": 0.7365856111378811,
+          "p_std": 0.04355860263309261,
+          "p_range": 0.09240174990260996
+        },
+        {
+          "group": "representation_0059",
+          "n": 3,
+          "target_probability": 0.20588235294117635,
+          "p_mean": 0.39793401149802593,
+          "p_std": 0.037008616297981016,
+          "p_range": 0.08917836378025612
+        },
+        {
+          "group": "representation_0060",
+          "n": 3,
+          "target_probability": 0.5,
+          "p_mean": 0.7268667403452268,
+          "p_std": 0.06001711592185007,
+          "p_range": 0.14683191307356702
+        },
+        {
+          "group": "representation_0061",
+          "n": 3,
+          "target_probability": 0.6829268292682926,
+          "p_mean": 0.7326486567053889,
+          "p_std": 0.07838082848966949,
+          "p_range": 0.17572744653776662
+        },
+        {
+          "group": "representation_0062",
+          "n": 3,
+          "target_probability": 0.8289473684210527,
+          "p_mean": 0.773848760590092,
+          "p_std": 0.04877481932341816,
+          "p_range": 0.1117894483566324
+        },
+        {
+          "group": "representation_0063",
+          "n": 3,
+          "target_probability": 0.6176470588235294,
+          "p_mean": 0.7422805011934556,
+          "p_std": 0.06485712170780944,
+          "p_range": 0.14683191307356702
+        },
+        {
+          "group": "representation_0064",
+          "n": 3,
+          "target_probability": 0.30769230769230776,
+          "p_mean": 0.6919171629885907,
+          "p_std": 0.07601139626762599,
+          "p_range": 0.1846332612206214
+        },
+        {
+          "group": "representation_0065",
+          "n": 3,
+          "target_probability": 0.75,
+          "p_mean": 0.7649799843695527,
+          "p_std": 0.06118478088851379,
+          "p_range": 0.13839577701825068
+        },
+        {
+          "group": "representation_0066",
+          "n": 3,
+          "target_probability": 0.15217391304347824,
+          "p_mean": 0.36909664509091816,
+          "p_std": 0.04990709227924808,
+          "p_range": 0.1170021982895949
+        },
+        {
+          "group": "representation_0067",
+          "n": 3,
+          "target_probability": 0.25,
+          "p_mean": 0.6592101089888246,
+          "p_std": 0.04829080745653634,
+          "p_range": 0.11311842788294157
+        },
+        {
+          "group": "representation_0068",
+          "n": 3,
+          "target_probability": 0.07692307692307691,
+          "p_mean": 0.34163998558329034,
+          "p_std": 0.0567150129021229,
+          "p_range": 0.1383919786759351
+        },
+        {
+          "group": "representation_0069",
+          "n": 3,
+          "target_probability": 0.02755905511811026,
+          "p_mean": 0.372528852234647,
+          "p_std": 0.09582915575604385,
+          "p_range": 0.2310585786300049
+        },
+        {
+          "group": "representation_0070",
+          "n": 3,
+          "target_probability": 0.6923076923076924,
+          "p_mean": 0.7296695576368831,
+          "p_std": 0.03570242840604988,
+          "p_range": 0.07573628769223528
+        },
+        {
+          "group": "representation_0071",
+          "n": 3,
+          "target_probability": 0.6923076923076924,
+          "p_mean": 0.7296695576368831,
+          "p_std": 0.03570242840604988,
+          "p_range": 0.07573628769223528
+        },
+        {
+          "group": "representation_0072",
+          "n": 3,
+          "target_probability": 0.25,
+          "p_mean": 0.6592101089888246,
+          "p_std": 0.04829080745653634,
+          "p_range": 0.11311842788294157
+        },
+        {
+          "group": "representation_0073",
+          "n": 3,
+          "target_probability": 0.4285714285714286,
+          "p_mean": 0.7107631016457038,
+          "p_std": 0.06244019488518593,
+          "p_range": 0.13245565566577366
+        },
+        {
+          "group": "representation_0074",
+          "n": 3,
+          "target_probability": 0.10937500000000007,
+          "p_mean": 0.40938490029017904,
+          "p_std": 0.0731637799710832,
+          "p_range": 0.17917869917539303
+        },
+        {
+          "group": "representation_0075",
+          "n": 3,
+          "target_probability": 0.6923076923076924,
+          "p_mean": 0.7296695576368831,
+          "p_std": 0.03570242840604988,
+          "p_range": 0.07573628769223528
+        },
+        {
+          "group": "representation_0076",
+          "n": 3,
+          "target_probability": 0.10937500000000007,
+          "p_mean": 0.40938490029017904,
+          "p_std": 0.0731637799710832,
+          "p_range": 0.17917869917539303
+        },
+        {
+          "group": "representation_0077",
+          "n": 3,
+          "target_probability": 0.9779411764705882,
+          "p_mean": 0.8546395577611294,
+          "p_std": 0.0546874239111807,
+          "p_range": 0.11600954487965764
+        },
+        {
+          "group": "representation_0078",
+          "n": 3,
+          "target_probability": 0.027027027027027018,
+          "p_mean": 0.3051411705127119,
+          "p_std": 0.05119417619213389,
+          "p_range": 0.10859924742815036
+        },
+        {
+          "group": "representation_0079",
+          "n": 3,
+          "target_probability": 0.75,
+          "p_mean": 0.7649799843695527,
+          "p_std": 0.06118478088851379,
+          "p_range": 0.13839577701825068
+        },
+        {
+          "group": "representation_0080",
+          "n": 3,
+          "target_probability": 0.012987012987012998,
+          "p_mean": 0.34643332843178687,
+          "p_std": 0.11042487697070232,
+          "p_range": 0.25491498686762826
+        },
+        {
+          "group": "representation_0081",
+          "n": 3,
+          "target_probability": 0.03571428571428571,
+          "p_mean": 0.3172833112055229,
+          "p_std": 0.08578941165938356,
+          "p_range": 0.19273848598183016
+        },
+        {
+          "group": "representation_0082",
+          "n": 3,
+          "target_probability": 0.6785714285714285,
+          "p_mean": 0.7365856111378811,
+          "p_std": 0.04355860263309261,
+          "p_range": 0.09240174990260996
+        },
+        {
+          "group": "representation_0083",
+          "n": 3,
+          "target_probability": 0.6829268292682926,
+          "p_mean": 0.7326486567053889,
+          "p_std": 0.07838082848966949,
+          "p_range": 0.17572744653776662
+        },
+        {
+          "group": "representation_0084",
+          "n": 3,
+          "target_probability": 0.6923076923076924,
+          "p_mean": 0.7296695576368831,
+          "p_std": 0.03570242840604988,
+          "p_range": 0.07573628769223528
+        },
+        {
+          "group": "representation_0085",
+          "n": 3,
+          "target_probability": 0.30769230769230776,
+          "p_mean": 0.6919171629885907,
+          "p_std": 0.07601139626762599,
+          "p_range": 0.1846332612206214
+        },
+        {
+          "group": "representation_0086",
+          "n": 3,
+          "target_probability": 0.3684210526315788,
+          "p_mean": 0.43798250859545856,
+          "p_std": 0.02509005962192128,
+          "p_range": 0.06145722658031355
+        },
+        {
+          "group": "representation_0087",
+          "n": 3,
+          "target_probability": 0.9109589041095889,
+          "p_mean": 0.7966879797516385,
+          "p_std": 0.029537966538741054,
+          "p_range": 0.0626594893260154
+        },
+        {
+          "group": "representation_0088",
+          "n": 3,
+          "target_probability": 0.6829268292682926,
+          "p_mean": 0.7326486567053889,
+          "p_std": 0.07838082848966949,
+          "p_range": 0.17572744653776662
+        },
+        {
+          "group": "representation_0089",
+          "n": 3,
+          "target_probability": 0.9109589041095889,
+          "p_mean": 0.7966879797516385,
+          "p_std": 0.029537966538741054,
+          "p_range": 0.0626594893260154
+        },
+        {
+          "group": "representation_0090",
+          "n": 3,
+          "target_probability": 0.9,
+          "p_mean": 0.7862810137113639,
+          "p_std": 0.057386911527982074,
+          "p_range": 0.12969850926642568
+        },
+        {
+          "group": "representation_0091",
+          "n": 3,
+          "target_probability": 0.027027027027027018,
+          "p_mean": 0.3051411705127119,
+          "p_std": 0.05119417619213389,
+          "p_range": 0.10859924742815036
+        },
+        {
+          "group": "representation_0092",
+          "n": 3,
+          "target_probability": 0.9,
+          "p_mean": 0.7862810137113639,
+          "p_std": 0.057386911527982074,
+          "p_range": 0.12969850926642568
+        },
+        {
+          "group": "representation_0093",
+          "n": 3,
+          "target_probability": 0.15217391304347824,
+          "p_mean": 0.36909664509091816,
+          "p_std": 0.04990709227924808,
+          "p_range": 0.1170021982895949
+        },
+        {
+          "group": "representation_0094",
+          "n": 3,
+          "target_probability": 0.6923076923076924,
+          "p_mean": 0.7296695576368831,
+          "p_std": 0.03570242840604988,
+          "p_range": 0.07573628769223528
+        },
+        {
+          "group": "representation_0095",
+          "n": 3,
+          "target_probability": 0.10937500000000007,
+          "p_mean": 0.40938490029017904,
+          "p_std": 0.0731637799710832,
+          "p_range": 0.17917869917539303
+        },
+        {
+          "group": "representation_0096",
+          "n": 3,
+          "target_probability": 0.03571428571428571,
+          "p_mean": 0.3172833112055229,
+          "p_std": 0.08578941165938356,
+          "p_range": 0.19273848598183016
+        },
+        {
+          "group": "representation_0097",
+          "n": 3,
+          "target_probability": 0.75,
+          "p_mean": 0.7649799843695527,
+          "p_std": 0.06118478088851379,
+          "p_range": 0.13839577701825068
+        },
+        {
+          "group": "representation_0098",
+          "n": 3,
+          "target_probability": 0.050000000000000044,
+          "p_mean": 0.36212572777672825,
+          "p_std": 0.0821430499792683,
+          "p_range": 0.19984920525624866
+        },
+        {
+          "group": "representation_0099",
+          "n": 3,
+          "target_probability": 0.19999999999999996,
+          "p_mean": 0.3784960336388224,
+          "p_std": 0.04078219467605407,
+          "p_range": 0.08651209922132325
+        }
+      ],
+      "mean_range": 0.13486913942244025,
+      "max_range": 0.2772998611746912
+    },
+    "prob_repeatability": {
+      "p20": {
+        "n": 50,
+        "target_probability": 0.2,
+        "mean": 0.9399133498259925,
+        "std": 1.1102230246251565e-16,
+        "min": 0.9399133498259924,
+        "max": 0.9399133498259924,
+        "range": 0.0
+      },
+      "p50": {
+        "n": 50,
+        "target_probability": 0.5,
+        "mean": 0.9740426428022032,
+        "std": 1.1102230246251565e-16,
+        "min": 0.9740426428022031,
+        "max": 0.9740426428022031,
+        "range": 0.0
+      },
+      "p80": {
+        "n": 50,
+        "target_probability": 0.8,
+        "mean": 0.9840936082881854,
+        "std": 1.1102230246251565e-16,
+        "min": 0.9840936082881853,
+        "max": 0.9840936082881853,
+        "range": 0.0
+      }
+    }
+  },
+  "scaling": {},
+  "by_experiment": {
+    "prob_base_rate_stress": {
+      "n": 600,
+      "accuracy": 0.455,
+      "nll_mean": 0.8260440924679054,
+      "brier_mean": 0.30930235276672086,
+      "prob_mae": 0.3208001805662759,
+      "prob_rmse": 0.36961789410655155,
+      "prob_bias": 0.31641936297485784
+    },
+    "prob_bayes_single_signal": {
+      "n": 1500,
+      "accuracy": 0.8186666666666667,
+      "nll_mean": 0.5068000689330161,
+      "brier_mean": 0.16284022168856524,
+      "prob_mae": 0.22772673281228534,
+      "prob_rmse": 0.275499150152258,
+      "prob_bias": 0.15869863630937364
+    },
+    "prob_bayes_two_signals": {
+      "n": 1500,
+      "accuracy": 0.8666666666666667,
+      "nll_mean": 0.3944790328315603,
+      "brier_mean": 0.115796275483529,
+      "prob_mae": 0.18784595159345616,
+      "prob_rmse": 0.21256723512222084,
+      "prob_bias": 0.10302918906402139
+    },
+    "prob_explicit_randomness": {
+      "n": 760,
+      "prob_mae": 0.360928441993348,
+      "prob_rmse": 0.4199552775596085,
+      "prob_bias": 0.35921106737771485
+    },
+    "prob_multiclass_bayes": {
+      "n": 1000,
+      "accuracy": 0.609,
+      "nll_mean": 1.0140645932200825,
+      "brier_mean": 0.5479039975439437,
+      "distribution_tv_mean": 0.1831044376302075,
+      "distribution_jsd_mean": 0.045434799203775744,
+      "target_kl_mean": 0.2304951683983251
+    },
+    "prob_repeatability": {
+      "n": 150,
+      "prob_mae": 0.46601653363879364,
+      "prob_rmse": 0.5183559423980727,
+      "prob_bias": 0.46601653363879364
+    },
+    "prob_representation_invariance": {
+      "n": 300,
+      "prob_mae": 0.18285305771193888,
+      "prob_rmse": 0.22088761323207415,
+      "prob_bias": 0.1389657430134239
+    }
+  },
+  "probabilistic": {
+    "binary_exact_probability": {
+      "n": 4810,
+      "mae": 0.25257861709412116,
+      "rmse": 0.30674135116344003,
+      "bias": 0.2010469792103777,
+      "max_abs_error": 0.9169140216112958,
+      "pearson_r": 0.7498158970233223,
+      "empirical_outcome_n": 3600,
+      "event_ece_15": 0.16281290699464337,
+      "outcome_brier": 0.1676489326161594,
+      "outcome_nll": 0.513206974479891,
+      "bins": [
+        {
+          "lo": 0.1,
+          "hi": 0.2,
+          "n": 163,
+          "mean_pred": 0.1768065146058741,
+          "mean_target": 0.01730533039447017,
+          "empirical_rate": 0.03773584905660377,
+          "empirical_n": 159
+        },
+        {
+          "lo": 0.2,
+          "hi": 0.30000000000000004,
+          "n": 1298,
+          "mean_pred": 0.244936100154996,
+          "mean_target": 0.05863053127560155,
+          "empirical_rate": 0.06847133757961783,
+          "empirical_n": 1256
+        },
+        {
+          "lo": 0.30000000000000004,
+          "hi": 0.4,
+          "n": 438,
+          "mean_pred": 0.3447069700683959,
+          "mean_target": 0.2452270386635337,
+          "empirical_rate": 0.27411167512690354,
+          "empirical_n": 394
+        },
+        {
+          "lo": 0.4,
+          "hi": 0.5,
+          "n": 412,
+          "mean_pred": 0.4365632896521093,
+          "mean_target": 0.196491090566704,
+          "empirical_rate": 0.17941176470588235,
+          "empirical_n": 340
+        },
+        {
+          "lo": 0.5,
+          "hi": 0.6000000000000001,
+          "n": 181,
+          "mean_pred": 0.545604871859618,
+          "mean_target": 0.23808737920958675,
+          "empirical_rate": 0.336,
+          "empirical_n": 125
+        },
+        {
+          "lo": 0.6000000000000001,
+          "hi": 0.7000000000000001,
+          "n": 242,
+          "mean_pred": 0.6544101298173542,
+          "mean_target": 0.42641264787218647,
+          "empirical_rate": 0.41621621621621624,
+          "empirical_n": 185
+        },
+        {
+          "lo": 0.7000000000000001,
+          "hi": 0.8,
+          "n": 608,
+          "mean_pred": 0.7521158990914528,
+          "mean_target": 0.48171008275828603,
+          "empirical_rate": 0.4701670644391408,
+          "empirical_n": 419
+        },
+        {
+          "lo": 0.8,
+          "hi": 0.9,
+          "n": 732,
+          "mean_pred": 0.8527349863536537,
+          "mean_target": 0.7531645696755919,
+          "empirical_rate": 0.7933450087565674,
+          "empirical_n": 571
+        },
+        {
+          "lo": 0.9,
+          "hi": 1.0,
+          "n": 736,
+          "mean_pred": 0.9510001690896838,
+          "mean_target": 0.667573057062246,
+          "empirical_rate": 0.9536423841059603,
+          "empirical_n": 151
+        }
+      ],
+      "unique_returned_probabilities": 56
+    },
+    "multiclass_exact_distribution": {
+      "n": 1000,
+      "tv_mean": 0.1831044376302075,
+      "tv_p95": 0.40121555818694227,
+      "jsd_mean": 0.045434799203775744,
+      "kl_target_pred_mean": 0.2304951683983251,
+      "soft_brier_mean": 0.08834436872372174,
+      "hard_accuracy": 0.609
+    }
+  }
+}

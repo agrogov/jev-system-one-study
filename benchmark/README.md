@@ -642,3 +642,5 @@ All experiment generators, metrics, reports, and configs are now present in this
 A local Laya provider/replay adapter is available in this study tree. It replays the exact five recorded Jev `cases.jsonl` inputs and generates directly comparable raw and normalized results.
 
 See [`LAYA_COMPARISON.md`](LAYA_COMPARISON.md) for Apple Silicon/MLX installation, exact commands, fairness constraints, output structure, specialist-vs-base checkpoint guidance, and comparison reporting.
+
+See [`SEMIF_COMPARISON.md`](SEMIF_COMPARISON.md) for the SemIf (Qwen3.5-4B, MLX) replay: installation, commands, primitive mapping, and reported limits.

@@ -1,0 +1,125 @@
+{
+  "requests_total": 1110,
+  "requests_ok": 1110,
+  "requests_failed": 0,
+  "latency_ms": {
+    "p50": 208.4611045429483,
+    "p95": 362.22345652058715,
+    "p99": 397.7377617848106,
+    "mean": 248.9639108201388
+  },
+  "calibration": {
+    "choice": {
+      "n": 1110,
+      "accuracy": 0.690990990990991,
+      "nll_mean": 0.6828105568792734,
+      "brier_mean": 0.3949174416718277,
+      "ece_15": 0.16148516854280942
+    }
+  },
+  "metamorphic": {},
+  "scaling": {},
+  "by_experiment": {
+    "semantic_adjudication": {
+      "n": 720,
+      "accuracy": 0.7319444444444444,
+      "nll_mean": 0.5782804249256606,
+      "brier_mean": 0.34597839977398714,
+      "distribution_tv_mean": 0.2729252585573997,
+      "distribution_jsd_mean": 0.08998610513525984,
+      "target_kl_mean": 0.6040748144318354
+    },
+    "semantic_repeatability": {
+      "n": 390,
+      "accuracy": 0.6153846153846154,
+      "nll_mean": 0.8757892620244043,
+      "brier_mean": 0.4852664420986104,
+      "distribution_tv_mean": 0.3532715662479952,
+      "distribution_jsd_mean": 0.10876395666674753,
+      "target_kl_mean": 0.7843218144174188
+    }
+  },
+  "probabilistic": {
+    "multiclass_exact_distribution": {
+      "n": 1110,
+      "tv_mean": 0.3011550423405819,
+      "tv_p95": 0.5895822256248177,
+      "jsd_mean": 0.0965837286463231,
+      "kl_target_pred_mean": 0.6674048414537972,
+      "soft_brier_mean": 0.19891243260610555,
+      "hard_accuracy": 0.690990990990991
+    }
+  },
+  "semantic": {
+    "n": 1110,
+    "tv_mean": 0.3011550423405819,
+    "tv_p95": 0.5895822256248177,
+    "jsd_mean": 0.0965837286463231,
+    "kl_target_pred_mean": 0.6674048414537972,
+    "soft_brier_mean": 0.19891243260610555,
+    "modal_accuracy": 0.690990990990991,
+    "reference_max_mean": 0.677027027027027,
+    "jev_max_mean": 0.8514230673781965,
+    "overconfidence_gap_mean": 0.1743960403511695,
+    "overconfidence_gap_p95": 0.44603758828930573,
+    "reference_entropy_mean": 0.5407834120447098,
+    "jev_entropy_mean": 0.29405486381552837,
+    "entropy_gap_mean": -0.24672854822918147,
+    "by_domain": {
+      "code_review_severity": {
+        "n": 210,
+        "tv_mean": 0.24167016867294103,
+        "jsd_mean": 0.06532021932581124,
+        "modal_accuracy": 0.7666666666666667,
+        "overconfidence_gap_mean": 0.15160907998453313,
+        "reference_entropy_mean": 0.5845376646443795,
+        "jev_entropy_mean": 0.33281973125508624
+      },
+      "hardware_fault": {
+        "n": 150,
+        "tv_mean": 0.29711445426296157,
+        "jsd_mean": 0.09591500234672853,
+        "modal_accuracy": 0.9266666666666666,
+        "overconfidence_gap_mean": 0.2307648599216951,
+        "reference_entropy_mean": 0.614198638909363,
+        "jev_entropy_mean": 0.23325789465340704
+      },
+      "incident_triage": {
+        "n": 210,
+        "tv_mean": 0.2290684312608728,
+        "jsd_mean": 0.06139392712564466,
+        "modal_accuracy": 0.8142857142857143,
+        "overconfidence_gap_mean": 0.1460217951554406,
+        "reference_entropy_mean": 0.5260407405376613,
+        "jev_entropy_mean": 0.3165802635848619
+      },
+      "policy_compliance": {
+        "n": 150,
+        "tv_mean": 0.3882882666955442,
+        "jsd_mean": 0.1634456010268126,
+        "modal_accuracy": 0.7466666666666667,
+        "overconfidence_gap_mean": 0.06572639679544122,
+        "reference_entropy_mean": 0.35907774461820574,
+        "jev_entropy_mean": 0.22372465183981097
+      },
+      "security_classification": {
+        "n": 180,
+        "tv_mean": 0.3629167239061082,
+        "jsd_mean": 0.12568750990701924,
+        "modal_accuracy": 0.5222222222222223,
+        "overconfidence_gap_mean": 0.2342477700858054,
+        "reference_entropy_mean": 0.5261370415898643,
+        "jev_entropy_mean": 0.18433164335019647
+      },
+      "support_routing": {
+        "n": 210,
+        "tv_mean": 0.32043605983366485,
+        "jsd_mean": 0.09081012263484878,
+        "modal_accuracy": 0.42857142857142855,
+        "overconfidence_gap_mean": 0.21161349470184887,
+        "reference_entropy_mean": 0.601676177457564,
+        "jev_entropy_mean": 0.42047534353252053
+      }
+    }
+  }
+}

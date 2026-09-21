@@ -1,0 +1,131 @@
+[
+  {
+    "suite": "architecture core",
+    "aligned_decisions": 438,
+    "accuracy_jev": 0.9885844748858448,
+    "accuracy_laya": 0.860730593607306,
+    "accuracy_semif": 1.0,
+    "coverage_jev": 1.0,
+    "coverage_laya": 0.9801980198019802,
+    "coverage_semif": 0.9900990099009901,
+    "statuses_jev": {
+      "full_input": 303
+    },
+    "statuses_laya": {
+      "full_input": 297,
+      "truncated_input": 6
+    },
+    "statuses_semif": {
+      "full_input": 300,
+      "unsupported_cardinality": 3
+    },
+    "wall_p50_ms_jev": 332.4694170150906,
+    "wall_p50_ms_laya": 12.755499919876456,
+    "wall_p50_ms_semif": 163.86522899847478
+  },
+  {
+    "suite": "isolated core scaling",
+    "aligned_decisions": 137,
+    "accuracy_jev": 1.0,
+    "accuracy_laya": 0.7737226277372263,
+    "accuracy_semif": 1.0,
+    "coverage_jev": 1.0,
+    "coverage_laya": 0.7692307692307693,
+    "coverage_semif": 0.8846153846153846,
+    "statuses_jev": {
+      "full_input": 26
+    },
+    "statuses_laya": {
+      "full_input": 20,
+      "truncated_input": 6
+    },
+    "statuses_semif": {
+      "full_input": 23,
+      "unsupported_cardinality": 3
+    },
+    "wall_p50_ms_jev": 323.7559371627867,
+    "wall_p50_ms_laya": 66.47170858923346,
+    "wall_p50_ms_semif": 554.0472499560565
+  },
+  {
+    "suite": "full boundary scaling",
+    "aligned_decisions": 265,
+    "accuracy_jev": 1.0,
+    "accuracy_laya": 0.6641509433962264,
+    "accuracy_semif": 0.9245283018867925,
+    "coverage_jev": 1.0,
+    "coverage_laya": 0.6774193548387096,
+    "coverage_semif": 0.8709677419354839,
+    "statuses_jev": {
+      "full_input": 31
+    },
+    "statuses_laya": {
+      "full_input": 21,
+      "unsupported_cardinality": 1,
+      "truncated_input": 9
+    },
+    "statuses_semif": {
+      "full_input": 27,
+      "unsupported_cardinality": 4
+    },
+    "wall_p50_ms_jev": 329.61054192855954,
+    "wall_p50_ms_laya": 88.03652040660381,
+    "wall_p50_ms_semif": 1504.8785409890115
+  },
+  {
+    "suite": "probability calibration",
+    "aligned_decisions": 4600,
+    "accuracy_jev": 0.806304347826087,
+    "accuracy_laya": 0.5941304347826087,
+    "accuracy_semif": 0.741304347826087,
+    "coverage_jev": 1.0,
+    "coverage_laya": 1.0,
+    "coverage_semif": 1.0,
+    "statuses_jev": {
+      "full_input": 5810
+    },
+    "statuses_laya": {
+      "full_input": 5810
+    },
+    "statuses_semif": {
+      "full_input": 5810
+    },
+    "wall_p50_ms_jev": 321.35535404086113,
+    "wall_p50_ms_laya": 13.638937496580184,
+    "wall_p50_ms_semif": 206.07047947123647,
+    "prob_mae_jev": 0.07933866006590588,
+    "tv_jev": 0.300963509612455,
+    "prob_mae_laya": 0.28921526769331657,
+    "tv_laya": 0.3426773060308825,
+    "prob_mae_semif": 0.25257861709412116,
+    "tv_semif": 0.18310443763020745
+  },
+  {
+    "suite": "semantic",
+    "aligned_decisions": 1110,
+    "accuracy_jev": 0.9036036036036036,
+    "accuracy_laya": 0.44054054054054054,
+    "accuracy_semif": 0.690990990990991,
+    "coverage_jev": 1.0,
+    "coverage_laya": 1.0,
+    "coverage_semif": 1.0,
+    "statuses_jev": {
+      "full_input": 1110
+    },
+    "statuses_laya": {
+      "full_input": 1110
+    },
+    "statuses_semif": {
+      "full_input": 1110
+    },
+    "wall_p50_ms_jev": 332.2584165725857,
+    "wall_p50_ms_laya": 18.34120857529342,
+    "wall_p50_ms_semif": 208.4611045429483,
+    "tv_jev": 0.24068018018018014,
+    "mean_top_prob_jev": 0.8821171171171172,
+    "tv_laya": 0.394030045045045,
+    "mean_top_prob_laya": 0.4165203603603604,
+    "tv_semif": 0.3011550423405819,
+    "mean_top_prob_semif": 0.8514230673781965
+  }
+]

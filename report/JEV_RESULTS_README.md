@@ -10,7 +10,7 @@ This directory contains the integrated black-box study of TypeSafe Jev/System On
 - `requirements-analysis.txt` — dependencies required by the integrated analysis script.
 - `figures/` — publication figures generated from the five recorded result folders.
 
-The Laya companion study is indexed in `LAYA_RESULTS_README.md`; the aligned comparison is `JEV_VS_LAYA_COMPARISON_REPORT.md`.
+The Laya and SemIf companion studies are indexed in `LAYA_RESULTS_README.md` and `SEMIF_RESULTS_README.md`; the aligned comparison is `JEV_VS_LAYA_COMPARISON_REPORT.md`.
 
 The five self-contained recorded run directories are available at `../jev-results/`. They are the sole experimental inputs used by `reproduce_analysis.py`; no duplicate legacy result archives are required.
 

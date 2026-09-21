@@ -1,0 +1,42 @@
+{
+  "cases": 303,
+  "by_experiment": {
+    "calibration_choice": 50,
+    "calibration_noul_factual": 50,
+    "calibration_noul_negation": 50,
+    "calibration_score": 50,
+    "candidate_order_invariance": 16,
+    "choice_cardinality_scaling": 7,
+    "context_length_position": 12,
+    "contradiction_sensitivity": 2,
+    "domain_generalization": 6,
+    "evidence_removal": 4,
+    "irrelevant_context_robustness": 6,
+    "label_key_invariance": 16,
+    "parallel_question_scaling": 7,
+    "question_independence": 6,
+    "question_paraphrase_invariance": 8,
+    "repeatability": 12,
+    "state_prompt_injection": 1
+  },
+  "questions_per_request": {
+    "count": 303,
+    "min": 1,
+    "max": 64
+  },
+  "choice_cardinality": {
+    "count": 145,
+    "min": 2,
+    "max": 128
+  },
+  "score_levels": {
+    "count": 64,
+    "min": 3,
+    "max": 4
+  },
+  "state_characters": {
+    "count": 303,
+    "min": 41,
+    "max": 32120
+  }
+}

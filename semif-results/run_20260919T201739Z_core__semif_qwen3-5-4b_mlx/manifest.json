@@ -1,0 +1,230 @@
+{
+  "created_at_utc": "2026-09-21T18:06:33.228545+00:00",
+  "provider": "semif-local",
+  "backend": "mlx",
+  "checkpoint": "qwen3.5-4b",
+  "model": "Qwen/Qwen3.5-4B",
+  "package_version": "0.1.0",
+  "device": "gpu",
+  "dtype": "mlx.core.bfloat16,mlx.core.float32",
+  "batch_size": null,
+  "model_load_seconds": 6.319675915874541,
+  "warmup_seconds": 0.24584525008685887,
+  "budget_overrides": {},
+  "effective_limits": {
+    "max_len": null,
+    "head_max_len": null
+  },
+  "source_run": "run_20260919T201739Z_core",
+  "source_manifest": {
+    "created_at_utc": "2026-09-19T20:17:39.965923+00:00",
+    "model": "jev-latest",
+    "profile": "core",
+    "seed": 260919,
+    "case_count": 26,
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "config": {
+      "api": {
+        "base_url": "https://api.typesafe.ai",
+        "endpoint": "/v1/systemone",
+        "model": "jev-latest",
+        "timeout_seconds": 60,
+        "concurrency": 1,
+        "max_retries": 5,
+        "min_retry_seconds": 1.0,
+        "max_retry_seconds": 30.0
+      },
+      "run": {
+        "seed": 260919,
+        "output_dir": "results",
+        "profile": "core",
+        "repetitions": 8,
+        "save_request_bodies": true,
+        "save_response_bodies": true
+      },
+      "profiles": {
+        "smoke": {
+          "calibration_cases_per_family": 8,
+          "permutation_trials": 4,
+          "paraphrase_trials": 3,
+          "repeatability_repetitions": 4,
+          "parallel_question_counts": [
+            1,
+            4,
+            16
+          ],
+          "cardinalities": [
+            2,
+            8,
+            32
+          ],
+          "context_chars": [
+            500,
+            4000
+          ]
+        },
+        "core": {
+          "calibration_cases_per_family": 50,
+          "permutation_trials": 16,
+          "paraphrase_trials": 8,
+          "repeatability_repetitions": 12,
+          "parallel_question_counts": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "cardinalities": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128
+          ],
+          "context_chars": [
+            500,
+            2000,
+            8000,
+            32000
+          ]
+        },
+        "full": {
+          "calibration_cases_per_family": 200,
+          "permutation_trials": 64,
+          "paraphrase_trials": 24,
+          "repeatability_repetitions": 40,
+          "parallel_question_counts": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128
+          ],
+          "cardinalities": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64,
+            128,
+            255
+          ],
+          "context_chars": [
+            500,
+            2000,
+            8000,
+            32000,
+            100000
+          ]
+        }
+      }
+    },
+    "finished_at_utc": "2026-09-19T20:17:49.060108+00:00",
+    "elapsed_seconds": 9.082537000067532
+  },
+  "source_cases_sha256": "d2bd8aa36930f267a675696ea63284056779801ff9548d9912b16ce12ad50bc1",
+  "selected_cases_sha256": "d2bd8aa36930f267a675696ea63284056779801ff9548d9912b16ce12ad50bc1",
+  "preflight": {
+    "cases": 26,
+    "by_experiment": {
+      "choice_cardinality_scaling": 7,
+      "context_length_position": 12,
+      "parallel_question_scaling": 7
+    },
+    "questions_per_request": {
+      "count": 26,
+      "min": 1,
+      "max": 64
+    },
+    "choice_cardinality": {
+      "count": 19,
+      "min": 2,
+      "max": 128
+    },
+    "score_levels": {
+      "count": 0,
+      "min": null,
+      "max": null
+    },
+    "state_characters": {
+      "count": 26,
+      "min": 154,
+      "max": 32120
+    }
+  },
+  "case_count": 26,
+  "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "resume": false,
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "mlx_bits": null,
+  "max_input_tokens": 65536,
+  "runtime": {
+    "mlx_version": "0.32.2",
+    "mlx_lm_version": "0.32.0",
+    "transformers_version": "5.17.0",
+    "mlx_lm_source": {
+      "url": "https://github.com/ml-explore/mlx-lm.git",
+      "vcs_info": {
+        "commit_id": "a63e24c389382619eb6d9af656e3b46024be217a",
+        "requested_revision": "a63e24c389382619eb6d9af656e3b46024be217a",
+        "vcs": "git"
+      }
+    },
+    "allocator_cache_limit_bytes": 268435456,
+    "quantization": null
+  },
+  "source_artifact_sha256": {
+    "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "config.json": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+    "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "model.safetensors-00001-of-00002.safetensors": "26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61",
+    "model.safetensors-00002-of-00002.safetensors": "cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188",
+    "model.safetensors.index.json": "cf3f798ee02ba45f9622aa8892a47369ab667d0afbf154ee7c2212de42e6302d",
+    "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+    "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+    "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+    "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+  },
+  "primitive_mapping": {
+    "noul": "yes/no options, noul=P(yes)",
+    "choice": "criteria as options",
+    "score": "ordinal criteria as options, score=E[index]"
+  },
+  "noul_options": [
+    {
+      "id": "yes",
+      "description": "Yes: the answer to the question is yes."
+    },
+    {
+      "id": "no",
+      "description": "No: the answer to the question is no."
+    }
+  ],
+  "execution_mapping": {
+    "1 question": "direct",
+    ">1 questions": "shared (one state prefill, parallel suffixes)"
+  },
+  "platform_semif": "macOS-26.6.2-arm64-arm-64bit",
+  "finished_at_utc": "2026-09-21T18:07:09.728124+00:00",
+  "elapsed_seconds": 36.49949179100804,
+  "requests_total": 26,
+  "requests_ok": 23,
+  "requests_failed": 3,
+  "requests_comparable": 23,
+  "compatibility_status": {
+    "full_input": 23,
+    "unsupported_cardinality": 3
+  }
+}

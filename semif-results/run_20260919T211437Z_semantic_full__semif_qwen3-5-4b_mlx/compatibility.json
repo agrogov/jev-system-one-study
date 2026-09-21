@@ -1,0 +1,34 @@
+{
+  "requests_total": 1110,
+  "requests_ok": 1110,
+  "requests_failed": 0,
+  "requests_comparable": 1110,
+  "compatibility_status": {
+    "full_input": 1110
+  },
+  "by_experiment": {
+    "semantic_adjudication": {
+      "total": 720,
+      "ok": 720,
+      "failed": 0,
+      "full_input": 720,
+      "truncated_input": 0,
+      "input_too_long": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 720
+    },
+    "semantic_repeatability": {
+      "total": 390,
+      "ok": 390,
+      "failed": 0,
+      "full_input": 390,
+      "truncated_input": 0,
+      "input_too_long": 0,
+      "unsupported_cardinality": 0,
+      "backend_error": 0,
+      "comparable": 390
+    }
+  },
+  "failure_types": {}
+}
