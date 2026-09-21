@@ -4,7 +4,7 @@ This file indexes the Laya companion study. All Laya evidence lives at paths dis
 
 ## Published reports
 
-- `LAYA_SYSTEM_ONE_BLACKBOX_REPORT.md` — Laya-only study, using the same five source benchmark suites as the Jev report.
+- `LAYA_OPEN_WEIGHT_REPORT.md` — Laya-only study, using the same five source benchmark suites as the Jev report.
 - `JEV_VS_LAYA_COMPARISON_REPORT.md` — controlled aligned comparison against the recorded Jev results.
 
 ## Evidence

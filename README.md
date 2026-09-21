@@ -15,7 +15,7 @@ jev-system-one-study/
 ## Start here
 
 1. Read `report/JEV_SYSTEM_ONE_BLACKBOX_REPORT.md` for the Jev findings and reverse-engineered architecture.
-2. Read `report/LAYA_SYSTEM_ONE_BLACKBOX_REPORT.md` for the Laya-only study on the same five suites.
+2. Read `report/LAYA_OPEN_WEIGHT_REPORT.md` for the Laya-only study on the same five suites.
 3. Read `report/JEV_VS_LAYA_COMPARISON_REPORT.md` for the controlled, aligned Jev-vs-Laya comparison.
 4. Read `benchmark/README.md` for Python setup, build, installation, suite documentation, exact reproduction commands, and output formats.
 5. Read `benchmark/LAYA_COMPARISON.md` to rerun the Laya replay locally.
