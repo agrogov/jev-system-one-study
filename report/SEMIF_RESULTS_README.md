@@ -5,14 +5,16 @@ This file indexes the SemIf companion study. All SemIf evidence lives at paths d
 ## Published reports
 
 - `SEMIF_OPEN_MODEL_REPORT.md` — SemIf-only study, using the same five source benchmark suites as the Jev report.
-- `../comparisons/three_way/THREE_WAY_REPORT.md` — Jev vs Laya vs SemIf on identical decisions.
-- `../comparisons/semif_qwen3-5-4b_mlx/JEV_VS_SEMIF_REPORT.md` — generated two-way Jev vs SemIf comparison.
+- `JEV_VS_SEMIF_COMPARISON_REPORT.md` — controlled aligned comparison against the recorded Jev results.
+- `JEV_LAYA_SEMIF_COMPARISON_REPORT.md` — Jev vs Laya vs SemIf on identical decisions, with bootstrap intervals.
+- `../comparisons/semif_qwen3-5-4b_mlx/JEV_VS_SEMIF_REPORT.md` and `../comparisons/three_way/THREE_WAY_REPORT.md` — the generated tables behind those reports.
 
 ## Evidence
 
 - `../semif-results` — five **primary full-run** result directories, one per Jev source run in `../jev-results`. These are the canonical SemIf evidence.
 - `../comparisons/semif_qwen3-5-4b_mlx` — machine-readable Jev-vs-SemIf comparison summary and scaling rows.
 - `../comparisons/three_way` — machine-readable three-way summary (`three_way_summary.json` / `.csv`).
+- `semif_computed_statistics.json` — recomputed integrated statistics and paired bootstrap confidence intervals used by the reports (`../benchmark/scripts/compute_semif_statistics.py`).
 - `../benchmark` — SemIf replay adapter, configuration, requirements, comparison scripts, wrapper, and regression tests.
 
 ## Primary model/runtime

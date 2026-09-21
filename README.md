@@ -19,10 +19,11 @@ jev-system-one-study/
 2. Read `report/LAYA_OPEN_WEIGHT_REPORT.md` for the Laya-only study on the same five suites.
 3. Read `report/JEV_VS_LAYA_COMPARISON_REPORT.md` for the controlled, aligned Jev-vs-Laya comparison.
 4. Read `report/SEMIF_OPEN_MODEL_REPORT.md` for the SemIf (Qwen3.5-4B) study on the same five suites.
-5. Read `comparisons/three_way/THREE_WAY_REPORT.md` for Jev vs Laya vs SemIf on identical decisions.
-6. Read `benchmark/README.md` for Python setup, build, installation, suite documentation, exact reproduction commands, and output formats.
-7. Read `benchmark/LAYA_COMPARISON.md` and `benchmark/SEMIF_COMPARISON.md` to rerun the Laya and SemIf replays locally.
-8. Inspect `jev-results/`, `laya-results/` and `semif-results/` for the complete raw evidence (`raw.jsonl`, `cases.jsonl`, manifests, normalized data, reports, and figures).
+5. Read `report/JEV_VS_SEMIF_COMPARISON_REPORT.md` for the controlled, aligned Jev-vs-SemIf comparison.
+6. Read `report/JEV_LAYA_SEMIF_COMPARISON_REPORT.md` for Jev vs Laya vs SemIf on identical decisions.
+7. Read `benchmark/README.md` for Python setup, build, installation, suite documentation, exact reproduction commands, and output formats.
+8. Read `benchmark/LAYA_COMPARISON.md` and `benchmark/SEMIF_COMPARISON.md` to rerun the Laya and SemIf replays locally.
+9. Inspect `jev-results/`, `laya-results/` and `semif-results/` for the complete raw evidence (`raw.jsonl`, `cases.jsonl`, manifests, normalized data, reports, and figures).
 
 Per-side indexes: `report/JEV_RESULTS_README.md`, `report/LAYA_RESULTS_README.md` and `report/SEMIF_RESULTS_README.md`.
 
@@ -66,7 +67,7 @@ SemIf runtime: `Qwen/Qwen3.5-4B` (revision `851bf6e8`), SemIf commit `ca3ba65`, 
 
 ## Headline results: Jev vs Laya vs SemIf
 
-All three systems are scored on **identical decisions** (Jev completed them and both local systems consumed the full request). Details and scaling tables are in `comparisons/three_way/THREE_WAY_REPORT.md`.
+All three systems are scored on **identical decisions** (Jev completed them and both local systems consumed the full request). Full analysis with bootstrap confidence intervals is in `report/JEV_LAYA_SEMIF_COMPARISON_REPORT.md`; the generated tables are in `comparisons/three_way/THREE_WAY_REPORT.md`.
 
 Accuracy:
 

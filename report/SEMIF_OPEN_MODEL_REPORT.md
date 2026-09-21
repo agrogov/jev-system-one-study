@@ -138,4 +138,4 @@ SemIf beats Jev on hardware_fault but is weak on security_classification and sup
 
 ## 9. Reproducibility and preserved evidence
 
-The repository preserves every primary run under `../semif-results/` with `manifest.json`, `cases.jsonl`, `raw.jsonl`, `normalized.csv`, `summary.json`, compatibility metadata, per-run reports, and figures. The adapter, configuration and tests are under `../benchmark` (see `../benchmark/SEMIF_COMPARISON.md`), and the machine-readable comparisons are under `../comparisons/semif_qwen3-5-4b_mlx` and `../comparisons/three_way`.
+The repository preserves every primary run under `../semif-results/` with `manifest.json`, `cases.jsonl`, `raw.jsonl`, `normalized.csv`, `summary.json`, compatibility metadata, per-run reports, and figures. The adapter, configuration and tests are under `../benchmark` (see `../benchmark/SEMIF_COMPARISON.md`), and the machine-readable comparisons are under `../comparisons/semif_qwen3-5-4b_mlx` and `../comparisons/three_way`. Integrated statistics are in `semif_computed_statistics.json`. The pairwise and three-way analyses are `JEV_VS_SEMIF_COMPARISON_REPORT.md` and `JEV_LAYA_SEMIF_COMPARISON_REPORT.md`.

@@ -6,6 +6,7 @@ This file indexes the Laya companion study. All Laya evidence lives at paths dis
 
 - `LAYA_OPEN_WEIGHT_REPORT.md` — Laya-only study, using the same five source benchmark suites as the Jev report.
 - `JEV_VS_LAYA_COMPARISON_REPORT.md` — controlled aligned comparison against the recorded Jev results.
+- `JEV_LAYA_SEMIF_COMPARISON_REPORT.md` — three-way comparison including the SemIf (Qwen3.5-4B) replay.
 
 ## Evidence
 

@@ -1,0 +1,538 @@
+{
+  "seed": 260919,
+  "resamples": 2000,
+  "two_way": {
+    "architecture core": {
+      "aligned_rows": 444,
+      "coverage": {
+        "jev": {
+          "comparable": 303,
+          "total": 303,
+          "statuses": {
+            "full_input": 303
+          },
+          "wall_p50_ms": 332.4694170150906
+        },
+        "laya": {
+          "comparable": 297,
+          "total": 303,
+          "statuses": {
+            "full_input": 297,
+            "truncated_input": 6
+          },
+          "wall_p50_ms": 12.755499919876456
+        },
+        "semif": {
+          "comparable": 300,
+          "total": 303,
+          "statuses": {
+            "full_input": 300,
+            "unsupported_cardinality": 3
+          },
+          "wall_p50_ms": 163.86522899847478
+        }
+      },
+      "accuracy": {
+        "n": 444,
+        "diff": -0.01126126126126126,
+        "ci_low": -0.023641361366402283,
+        "ci_high": -0.0023979381088430696
+      },
+      "accuracy_jev": 0.9887387387387387,
+      "accuracy_semif": 1.0
+    },
+    "isolated core scaling": {
+      "aligned_rows": 143,
+      "coverage": {
+        "jev": {
+          "comparable": 26,
+          "total": 26,
+          "statuses": {
+            "full_input": 26
+          },
+          "wall_p50_ms": 323.7559371627867
+        },
+        "laya": {
+          "comparable": 20,
+          "total": 26,
+          "statuses": {
+            "full_input": 20,
+            "truncated_input": 6
+          },
+          "wall_p50_ms": 66.47170858923346
+        },
+        "semif": {
+          "comparable": 23,
+          "total": 26,
+          "statuses": {
+            "full_input": 23,
+            "unsupported_cardinality": 3
+          },
+          "wall_p50_ms": 554.0472499560565
+        }
+      },
+      "accuracy": {
+        "n": 143,
+        "diff": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "accuracy_jev": 1.0,
+      "accuracy_semif": 1.0
+    },
+    "full boundary scaling": {
+      "aligned_rows": 274,
+      "coverage": {
+        "jev": {
+          "comparable": 31,
+          "total": 31,
+          "statuses": {
+            "full_input": 31
+          },
+          "wall_p50_ms": 329.61054192855954
+        },
+        "laya": {
+          "comparable": 21,
+          "total": 31,
+          "statuses": {
+            "full_input": 21,
+            "unsupported_cardinality": 1,
+            "truncated_input": 9
+          },
+          "wall_p50_ms": 88.03652040660381
+        },
+        "semif": {
+          "comparable": 27,
+          "total": 31,
+          "statuses": {
+            "full_input": 27,
+            "unsupported_cardinality": 4
+          },
+          "wall_p50_ms": 1504.8785409890115
+        }
+      },
+      "accuracy": {
+        "n": 274,
+        "diff": 0.072992700729927,
+        "ci_low": 0.04,
+        "ci_high": 0.17338596491228042
+      },
+      "accuracy_jev": 1.0,
+      "accuracy_semif": 0.927007299270073
+    },
+    "probability calibration": {
+      "aligned_rows": 5810,
+      "coverage": {
+        "jev": {
+          "comparable": 5810,
+          "total": 5810,
+          "statuses": {
+            "full_input": 5810
+          },
+          "wall_p50_ms": 321.35535404086113
+        },
+        "laya": {
+          "comparable": 5810,
+          "total": 5810,
+          "statuses": {
+            "full_input": 5810
+          },
+          "wall_p50_ms": 13.638937496580184
+        },
+        "semif": {
+          "comparable": 5810,
+          "total": 5810,
+          "statuses": {
+            "full_input": 5810
+          },
+          "wall_p50_ms": 206.07047947123647
+        }
+      },
+      "accuracy": {
+        "n": 4600,
+        "diff": 0.065,
+        "ci_low": 0.05369565217391304,
+        "ci_high": 0.07630434782608696
+      },
+      "accuracy_jev": 0.806304347826087,
+      "accuracy_semif": 0.741304347826087,
+      "binary_mae": {
+        "jev": 0.07933866006590588,
+        "semif": 0.25257861709412116
+      },
+      "binary_mae_excess_semif_minus_jev": {
+        "n": 4810,
+        "diff": 0.1732399570282153,
+        "ci_low": 0.16811164545062451,
+        "ci_high": 0.17858488573731662
+      }
+    },
+    "semantic": {
+      "aligned_rows": 1110,
+      "coverage": {
+        "jev": {
+          "comparable": 1110,
+          "total": 1110,
+          "statuses": {
+            "full_input": 1110
+          },
+          "wall_p50_ms": 332.2584165725857
+        },
+        "laya": {
+          "comparable": 1110,
+          "total": 1110,
+          "statuses": {
+            "full_input": 1110
+          },
+          "wall_p50_ms": 18.34120857529342
+        },
+        "semif": {
+          "comparable": 1110,
+          "total": 1110,
+          "statuses": {
+            "full_input": 1110
+          },
+          "wall_p50_ms": 208.4611045429483
+        }
+      },
+      "accuracy": {
+        "n": 1110,
+        "diff": 0.2126126126126126,
+        "ci_low": 0.1864864864864865,
+        "ci_high": 0.24054054054054055
+      },
+      "accuracy_jev": 0.9036036036036036,
+      "accuracy_semif": 0.690990990990991,
+      "tv": {
+        "jev": 0.24068018018018014,
+        "semif": 0.3011550423405819
+      },
+      "tv_excess_semif_minus_jev": {
+        "n": 1110,
+        "diff": 0.060474862160401675,
+        "ci_low": 0.05070923289018794,
+        "ci_high": 0.07107056305896775
+      }
+    }
+  },
+  "three_way": {
+    "architecture core": {
+      "aligned_rows": 438,
+      "accuracy_diff": {
+        "jev_minus_laya": {
+          "n": 438,
+          "diff": 0.1278538812785388,
+          "ci_low": 0.06122292953878799,
+          "ci_high": 0.19120143451970767
+        },
+        "jev_minus_semif": {
+          "n": 438,
+          "diff": -0.01141552511415525,
+          "ci_low": -0.02393776595744681,
+          "ci_high": -0.002426028663892748
+        },
+        "semif_minus_laya": {
+          "n": 438,
+          "diff": 0.13926940639269406,
+          "ci_low": 0.07556011198446179,
+          "ci_high": 0.2011266989076961
+        }
+      },
+      "accuracy": {
+        "jev": 0.9885844748858448,
+        "laya": 0.860730593607306,
+        "semif": 1.0
+      },
+      "accuracy_n": 438
+    },
+    "isolated core scaling": {
+      "aligned_rows": 137,
+      "accuracy_diff": {
+        "jev_minus_laya": {
+          "n": 137,
+          "diff": 0.22627737226277372,
+          "ci_low": 0.0,
+          "ci_high": 0.31221719457013575
+        },
+        "jev_minus_semif": {
+          "n": 137,
+          "diff": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0
+        },
+        "semif_minus_laya": {
+          "n": 137,
+          "diff": 0.22627737226277372,
+          "ci_low": 0.0,
+          "ci_high": 0.31221719457013575
+        }
+      },
+      "accuracy": {
+        "jev": 1.0,
+        "laya": 0.7737226277372263,
+        "semif": 1.0
+      },
+      "accuracy_n": 137
+    },
+    "full boundary scaling": {
+      "aligned_rows": 265,
+      "accuracy_diff": {
+        "jev_minus_laya": {
+          "n": 265,
+          "diff": 0.33584905660377357,
+          "ci_low": 0.03389830508474576,
+          "ci_high": 0.40375721936364584
+        },
+        "jev_minus_semif": {
+          "n": 265,
+          "diff": 0.07547169811320754,
+          "ci_low": 0.04019919017237068,
+          "ci_high": 0.19445346320346316
+        },
+        "semif_minus_laya": {
+          "n": 265,
+          "diff": 0.26037735849056604,
+          "ci_low": -0.1429181929181929,
+          "ci_high": 0.3618139983069469
+        }
+      },
+      "accuracy": {
+        "jev": 1.0,
+        "laya": 0.6641509433962264,
+        "semif": 0.9245283018867925
+      },
+      "accuracy_n": 265
+    },
+    "probability calibration": {
+      "aligned_rows": 5810,
+      "accuracy_diff": {
+        "jev_minus_laya": {
+          "n": 4600,
+          "diff": 0.21217391304347827,
+          "ci_low": 0.1967391304347826,
+          "ci_high": 0.22847826086956521
+        },
+        "jev_minus_semif": {
+          "n": 4600,
+          "diff": 0.065,
+          "ci_low": 0.05369565217391304,
+          "ci_high": 0.07630434782608696
+        },
+        "semif_minus_laya": {
+          "n": 4600,
+          "diff": 0.14717391304347827,
+          "ci_low": 0.13130434782608696,
+          "ci_high": 0.1632608695652174
+        }
+      },
+      "accuracy": {
+        "jev": 0.806304347826087,
+        "laya": 0.5941304347826087,
+        "semif": 0.741304347826087
+      },
+      "accuracy_n": 4600,
+      "binary_mae": {
+        "jev": 0.07933866006590588,
+        "laya": 0.28921526769331657,
+        "semif": 0.25257861709412116
+      },
+      "binary_mae_n": 4810,
+      "binary_mae_diff": {
+        "laya_minus_jev": {
+          "n": 4810,
+          "diff": 0.20987660762741067,
+          "ci_low": 0.20547585426978557,
+          "ci_high": 0.21413982406272253
+        },
+        "semif_minus_jev": {
+          "n": 4810,
+          "diff": 0.1732399570282153,
+          "ci_low": 0.16811164545062451,
+          "ci_high": 0.17858488573731662
+        },
+        "laya_minus_semif": {
+          "n": 4810,
+          "diff": 0.0366366505991954,
+          "ci_low": 0.03044690425369554,
+          "ci_high": 0.04253801595097763
+        }
+      },
+      "multiclass_tv": {
+        "jev": 0.300963509612455,
+        "laya": 0.3426773060308825,
+        "semif": 0.18310443763020745
+      },
+      "multiclass_tv_n": 1000,
+      "multiclass_tv_diff": {
+        "semif_minus_jev": {
+          "n": 1000,
+          "diff": -0.11785907198224757,
+          "ci_low": -0.1290152476494957,
+          "ci_high": -0.10721939494621428
+        },
+        "laya_minus_jev": {
+          "n": 1000,
+          "diff": 0.04171379641842749,
+          "ci_low": 0.019696044202819337,
+          "ci_high": 0.06222179845215816
+        }
+      },
+      "family_mae": {
+        "prob_base_rate_stress": {
+          "n": 600,
+          "jev": 0.11079064158174769,
+          "laya": 0.26620535790593675,
+          "semif": 0.3208001805662758
+        },
+        "prob_bayes_single_signal": {
+          "n": 1500,
+          "jev": 0.08533607940113537,
+          "laya": 0.3856526162711624,
+          "semif": 0.22772673281228534
+        },
+        "prob_bayes_two_signals": {
+          "n": 1500,
+          "jev": 0.08588017825130531,
+          "laya": 0.24462507905763603,
+          "semif": 0.18784595159345607
+        },
+        "prob_explicit_randomness": {
+          "n": 760,
+          "jev": 0.0286315789473684,
+          "laya": 0.2342469736842105,
+          "semif": 0.360928441993348
+        },
+        "prob_multiclass_bayes": {
+          "n": 1000,
+          "jev": null,
+          "laya": null,
+          "semif": null
+        },
+        "prob_repeatability": {
+          "n": 150,
+          "jev": 0.01666666666666664,
+          "laya": 0.22019999999999995,
+          "semif": 0.46601653363879364
+        },
+        "prob_representation_invariance": {
+          "n": 300,
+          "jev": 0.11353394496432558,
+          "laya": 0.2497599328936432,
+          "semif": 0.18285305771193883
+        }
+      }
+    },
+    "semantic": {
+      "aligned_rows": 1110,
+      "accuracy_diff": {
+        "jev_minus_laya": {
+          "n": 1110,
+          "diff": 0.46306306306306305,
+          "ci_low": 0.4315315315315315,
+          "ci_high": 0.4954954954954955
+        },
+        "jev_minus_semif": {
+          "n": 1110,
+          "diff": 0.2126126126126126,
+          "ci_low": 0.1864864864864865,
+          "ci_high": 0.24054054054054055
+        },
+        "semif_minus_laya": {
+          "n": 1110,
+          "diff": 0.25045045045045045,
+          "ci_low": 0.21441441441441442,
+          "ci_high": 0.2882882882882883
+        }
+      },
+      "accuracy": {
+        "jev": 0.9036036036036036,
+        "laya": 0.44054054054054054,
+        "semif": 0.690990990990991
+      },
+      "accuracy_n": 1110,
+      "tv_diff": {
+        "laya_minus_jev": {
+          "n": 1110,
+          "diff": 0.15334986486486485,
+          "ci_low": 0.1372714864864865,
+          "ci_high": 0.1698896666666667
+        },
+        "semif_minus_jev": {
+          "n": 1110,
+          "diff": 0.060474862160401675,
+          "ci_low": 0.05070923289018794,
+          "ci_high": 0.07107056305896775
+        },
+        "laya_minus_semif": {
+          "n": 1110,
+          "diff": 0.0928750027044632,
+          "ci_low": 0.07574889071706303,
+          "ci_high": 0.1095062984176678
+        }
+      },
+      "tv": {
+        "jev": 0.24068018018018014,
+        "laya": 0.394030045045045,
+        "semif": 0.3011550423405819
+      },
+      "mean_top_probability": {
+        "jev": 0.8821171171171172,
+        "laya": 0.4165203603603604,
+        "semif": 0.8514230673781965
+      },
+      "reference_mean_top_probability": 0.677027027027027,
+      "domains": {
+        "code_review_severity": {
+          "n": 210,
+          "jev": 0.9809523809523809,
+          "laya": 0.28095238095238095,
+          "semif": 0.7666666666666667
+        },
+        "hardware_fault": {
+          "n": 150,
+          "jev": 0.8,
+          "laya": 0.58,
+          "semif": 0.9266666666666666
+        },
+        "incident_triage": {
+          "n": 210,
+          "jev": 1.0,
+          "laya": 0.3904761904761905,
+          "semif": 0.8142857142857143
+        },
+        "policy_compliance": {
+          "n": 150,
+          "jev": 0.9333333333333333,
+          "laya": 0.43333333333333335,
+          "semif": 0.7466666666666667
+        },
+        "security_classification": {
+          "n": 180,
+          "jev": 1.0,
+          "laya": 0.7666666666666667,
+          "semif": 0.5222222222222223
+        },
+        "support_routing": {
+          "n": 210,
+          "jev": 0.7,
+          "laya": 0.2761904761904762,
+          "semif": 0.42857142857142855
+        }
+      },
+      "confidence_ranking": {
+        "jev": {
+          "top_half_accuracy": 1.0,
+          "bottom_half_accuracy": 0.8072072072072072
+        },
+        "laya": {
+          "top_half_accuracy": 0.4126126126126126,
+          "bottom_half_accuracy": 0.46846846846846846
+        },
+        "semif": {
+          "top_half_accuracy": 0.8828828828828829,
+          "bottom_half_accuracy": 0.4990990990990991
+        }
+      }
+    }
+  }
+}
