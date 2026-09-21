@@ -25,13 +25,13 @@ Per-side indexes: `report/JEV_RESULTS_README.md` and `report/LAYA_RESULTS_README
 
 ## Included Jev study runs (`jev-results/`)
 
-| Jev run | Requests | Purpose |
-|---|---:|---|
-| `run_20260919T201050Z_core` | 303 | concurrent architecture/robustness core |
-| `run_20260919T201739Z_core` | 26 | isolated core architecture scaling |
-| `run_20260919T202139Z_full` | 31 | isolated full boundary scaling |
-| `run_20260919T203758Z_calibration_full` | 5,810 | exact probabilistic calibration |
-| `run_20260919T211437Z_semantic_full` | 1,110 | semantic calibration |
+| Jev run | Requests | Completed | Purpose |
+|---|---:|---:|---|
+| `run_20260919T201050Z_core` | 303 | 303 | concurrent architecture/robustness core |
+| `run_20260919T201739Z_core` | 26 | 26 | isolated core architecture scaling |
+| `run_20260919T202139Z_full` | 31 | 31 | isolated full boundary scaling |
+| `run_20260919T203758Z_calibration_full` | 5,810 | 5,810 | exact probabilistic calibration |
+| `run_20260919T211437Z_semantic_full` | 1,110 | 1,110 | semantic calibration |
 
 ## Included Laya study runs (`laya-results/`)
 
